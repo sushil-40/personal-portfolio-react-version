@@ -220,7 +220,9 @@ header {
 #skills {
   padding: 60px 0;
   text-align: center;
-  min-height: 80vh;
+  min-height: 60vh;
+  overflow: hidden;
+  position: relative;
 }
 
 #skills h2 {
@@ -237,9 +239,11 @@ header {
 
 .skill {
   background-color: rgba(255, 255, 255, 0.1);
+  position: relative;
+  height: 200px;
   padding: 30px;
   border-radius: 5px;
-  transition: transform 1s ease-in-out, background-color 1s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-color 0.6s ease-in-out;
 }
 
 .skill i {
@@ -293,6 +297,7 @@ header {
 
 /* Projects Section */
 #projects {
+  margin-top: 50px;
   padding: 60px 0;
   background-color: #fff;
   text-align: center;

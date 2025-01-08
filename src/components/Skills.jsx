@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 export const Skills = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [HoveredIndex, setHoveredIndex] = useState(null);
 
   const skillList = [
     {
@@ -48,11 +48,11 @@ export const Skills = () => {
     },
   ];
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
   };
   const handleMouseLeave = () => {
-    setIsHovered(false);
+    setHoveredIndex(null);
   };
 
   const SkillCounter = ({ target }) => {
@@ -95,12 +95,12 @@ export const Skills = () => {
           <div
             className="skill animated fadeInUp"
             key={index}
-            onMouseEnter={handleMouseEnter}
+            onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
             <i className={skill.iconClass} style={{ color: skill.color }}></i>
             <h3>{skill.title}</h3>
-            {isHovered ? (
+            {HoveredIndex === index ? (
               <div className="progressbar">
                 <div className="outer-progressbar ">
                   <div className="inner-progressbar flex-center">
