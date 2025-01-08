@@ -427,21 +427,23 @@ button[type="submit"]:hover {
 
 /* Footer */
 footer {
-  /* background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center; */
-  font-family: "Trirong", sans-serif;
-  font-weight: bold;
   min-height: 20vh;
-  background: #000;
+  background: linear-gradient(
+    135deg,
+    rgba(4, 4, 65, 0.849),
+    rgba(56, 10, 56, 0.486),
+    rgb(3, 3, 43)
+  );
+
   color: white;
   margin-top: 5rem;
-  flex-direction: column;
+  /* flex-direction: column; */
   /* background: url("/assets/footer-bg.png"); */
-  background: url("./assets/fbg-4.png");
-
+  /* background: url("./assets/fbg-4.png"); */
+  position: relative;
   background-size: cover;
+  box-shadow: 5px 5px 15px 20px rgb(34, 1, 53); /* Horizontal, Vertical, Blur, Color */
+  /* top: -50px; */
 }
 
 .social-links {
@@ -557,3 +559,70 @@ footer .bottom {
   opacity: 1;
   transform: translateY(0);
 } */
+
+.footer-container {
+  justify-content: center;
+  align-items: center;
+  /* background: purple; */
+  position: relative;
+  top: -30px;
+}
+.footer-top {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  margin-bottom: 30px;
+
+  /* position: relative;
+  
+  top: -30px; */
+  background: rgb(6, 59, 95);
+  box-shadow: -10px 20px 14px rgba(17, 17, 17, 0.788); /* Horizontal, Vertical, Blur, Color */
+}
+.footer-top h3 {
+  margin-left: 20px;
+  margin-top: 20px;
+  padding: 20px;
+}
+.footer-top p {
+  color: rgb(0, 0, 0);
+  margin-top: -20px;
+  margin-left: 45px;
+}
+
+.btn-contact-me {
+  background: linear-gradient(rgb(99, 177, 241), rgb(2, 5, 34));
+  color: white;
+}
+.btn-contact-me:hover {
+  transform: rotate(35deg);
+}
+.list-social-network {
+  margin-bottom: 15px;
+}
+
+.list-social-network li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.list-social-network li a {
+  color: #fff;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.list-social-network li a:hover {
+  color: #e8491d;
+}
+.footer-bottom-content {
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  gap: 30px;
+}
+
+.footer-bottom ul li {
+  color: black;
+}
