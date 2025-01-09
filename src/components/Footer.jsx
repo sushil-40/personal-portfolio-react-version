@@ -66,7 +66,6 @@ export const Footer = () => {
         <div className="footer-top d-flex">
           <div>
             <h3>Open to work</h3>
-            <p>Let's get started</p>
           </div>
           <div>
             <button className="btn-contact-me m-2">Contact me</button>
@@ -74,11 +73,11 @@ export const Footer = () => {
         </div>
         <div className="footer-bottom">
           <div className="row footer-bottom-content d-flex">
-            <div className="col-md-4 copyright-info mt-5">
+            <div className="col-md-4 copyright-info mt-4">
               &copy; Copy right all reserved 2024 || Sushil Dangoriya 🚀
             </div>
             <div className="col-sm">
-              <h3>Links</h3>
+              <h3 className="ms-2">Links</h3>
               <ul>
                 <li>
                   <a href="#hero">Home</a>
@@ -99,8 +98,8 @@ export const Footer = () => {
               <h3>Social Networks</h3>
               <ul className="list-social-network">
                 <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                    <i className="fab fa-twitter"></i>
+                  <a href="https://github.com/sushil-40">
+                    <i className="fa-brands fa-github"></i>
                   </a>
                 </li>
 
