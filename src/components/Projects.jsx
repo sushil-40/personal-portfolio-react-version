@@ -1,5 +1,6 @@
 import React from "react";
 import bImage from "../assets/b.jpg";
+import cImage from "../assets/skills2.gif";
 
 export const Projects = () => {
   const projectList = [
@@ -7,25 +8,26 @@ export const Projects = () => {
       title: "Flick Store",
       description:
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
-      img: { path: { bImage }, alt: "project_1" },
+      img: { path: bImage, alt: "project_2" },
+      alt: "project_1",
       backgroundColor: "red",
     },
     {
       title: "User List",
       description:
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
-      img: { path: "./assets/a.jpg", alt: "project_2" },
+      img: { path: cImage, alt: "project_2" },
     },
     {
       title: "TimeWise",
       description:
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
-      img: { path: "./assets/b.jpg", alt: "project_3" },
+      img: { path: bImage, alt: "project_3" },
     },
     {
       title: "Travel Vlog",
       description: "lorem ipsum dolor sit amet, consectetur adip",
-      img: { path: "./assets/a.jpg", alt: "project_4" },
+      img: { path: cImage, alt: "project_4" },
     },
   ];
   console.log(projectList);
@@ -39,7 +41,7 @@ export const Projects = () => {
             <div key={i} className="project">
               <img
                 src={project.img.path}
-                alt={project.img.alt}
+                alt={project.alt}
                 // height={50}
                 // width={50}
               />

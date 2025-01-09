@@ -9,7 +9,10 @@ export const Hero = () => {
     >
       <AnimatedIcons />
       <div className="container position-relative">
-        <h2 className="display-4 animated fadeInLeft font-effect-shadow-multiple">
+        <h1 className="lead  animated fadeInRight font-effect-shadow-multiple">
+          Sushil Dangoriya
+        </h1>
+        <h2 className=" animated fadeInLeft font-effect-shadow-multiple">
           Web Developer & Designer
         </h2>
         <p className="lead animated fadeInRight">
@@ -20,6 +23,12 @@ export const Hero = () => {
           className="btn btn-primary btn-lg animated fadeInUp"
         >
           Explore My Work
+        </a>
+        <a
+          href="#projects"
+          className="btn btn-primary btn-lg animated fadeInUp"
+        >
+          Download Resume
         </a>
       </div>
     </section>
