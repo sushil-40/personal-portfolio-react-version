@@ -1,14 +1,19 @@
 import React from "react";
 import AnimatedIcons from "./AnimatedIcon";
+import { Dice } from "./Dice";
 
 export const Hero = () => {
   return (
     <section
       id="hero"
-      className="d-flex align-items-center justify-content-center text-center"
+      className="d-flex align-items-center justify-content-center flex-column text-center"
     >
-      <AnimatedIcons />
-      <div className="container position-relative">
+      {/* 
+      <AnimatedIcons /> */}
+      <div className="roll-dice">
+        <Dice />
+      </div>
+      <div className="container hero-container">
         <h1 className="lead  animated fadeInRight font-effect-shadow-multiple">
           Sushil Dangoriya
         </h1>

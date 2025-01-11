@@ -1,5 +1,6 @@
 import React from "react";
 import profileImage from "../assets/b.jpg";
+import { Dice } from "./Dice";
 
 export const About = () => {
   return (
@@ -14,6 +15,7 @@ export const About = () => {
 
           <div>
             <h2 className="title">About Me</h2>
+
             {/* <h2 class="title">
           <span>About Me</span> */}
             {/* </h2> */}

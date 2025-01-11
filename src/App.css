@@ -83,29 +83,112 @@ header {
 }
 
 /* Hero Section */
+.circle {
+  height: 150px;
+  width: 150px; /* Add width to create a proper circle */
+  background: green;
+  border-radius: 50%;
+  position: relative;
+}
+
+/*    Dice Implementation   */
+.dice {
+  width: 100px;
+  height: 100px;
+  border: 4px solid black;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0px 4px 18px rgb(84, 4, 138);
+  /* animation: rollDice 2s linear; */
+}
+.roll-dice {
+  margin-top: 30px;
+}
+/* Rolling animation */
+.rolling {
+  animation: rollDice 2s linear;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+}
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.top-left {
+  top: 10%;
+  left: 10%;
+}
+.top-right {
+  top: 10%;
+  right: 10%;
+}
+.bottom-left {
+  bottom: 10%;
+  left: 10%;
+}
+.bottom-right {
+  bottom: 10%;
+  right: 10%;
+}
+.middle-left {
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.middle-right {
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+}
+
+@keyframes rollDice {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: rotateX(270deg) rotateY(90deg);
+  }
+  /* 50% {
+    transform: rotateX(90deg) rotateY(90deg);
+  } */
+  /* 75% {
+    transform: rotateX(180deg) rotateY(90deg);
+  }
+  */
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
 #hero {
-  min-height: 120vh;
-  background: url("./assets/hbg-1.png") no-repeat center center/cover;
+  min-height: 100vh;
+  /* padding-top: 20px; */
+  background: url("./assets/hbg-1.png") no-repeat center;
+  background-size: cover;
+  background-position: center;
   color: #fff;
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   overflow: hidden;
 }
 
-#hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background: rgba(0, 0, 0, 0.4); */
-  z-index: 1;
-}
-
 #hero .container {
+  margin-top: 80px;
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
 }
 
 #hero h2 {
