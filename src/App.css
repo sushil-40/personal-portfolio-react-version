@@ -178,16 +178,63 @@ header {
   /* padding-top: 20px; */
   background: url("./assets/hbg-1.png") no-repeat center;
   background-size: cover;
+
   background-position: center;
   color: #fff;
   position: relative;
   /* z-index: 1; */
   overflow: hidden;
 }
-
-#hero .container {
-  margin-top: 80px;
+.hero-container {
+  justify-content: space-between;
+  align-items: center;
+}
+.right-content {
   position: relative;
+}
+.my-image {
+  background: url("./assets/myPicture.png") no-repeat;
+  background-size: cover;
+  background-position: initial;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  border: 1px dotted darkgray;
+  opacity: 0.9;
+}
+.outer-circle {
+  width: 50px;
+  height: 50px;
+  background: blue;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle1 {
+  top: 2%;
+  left: -8%;
+
+  transform: translateX((-50%));
+}
+.circle2 {
+  top: 35%;
+  left: -20%;
+  transform: translateY(-50%);
+}
+.circle3 {
+  top: 60%;
+  left: -20%;
+  transform: translateY(-50%);
+}
+.circle4 {
+  top: 85%;
+  left: -12%;
+  transform: translateY(-50%);
+}
+#hero .container {
+  /* margin-top: 80px; */
+  position: relative;
+
   /* z-index: 2; */
 }
 
@@ -228,33 +275,47 @@ header {
   box-shadow: 0px -10px 12px 2px rgba(13, 2, 75, 0.815);
   color: #fff;
 }
-
+/* Parallax Section */
+.parallax {
+  height: 300px; /* Adjust the height as needed */
+  background-image: url("./assets/bg-2.webp"); /* Replace with your image */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /* About Section */
 #about {
-  /* padding: 60px 0; */
+  padding-bottom: 60px;
   background-color: #fff;
   /* margin-top: 1rem; */
 
   /* flex-wrap: wrap;
   background: url("./assets/about-bg-4.png") no-repeat;
   background-size: cover; */
-  padding: 7rem 0;
+  /* padding: 7rem 0; */
   position: relative;
-  background: var(--body-bg);
+  /* background: var(--body-bg); */
+  background: radial-gradient(rgb(117, 248, 187), rgba(0, 0, 0, 0.911));
 
+  padding-top: 10px;
   z-index: 1;
 }
 #about::before {
+  /* margin-top: 80px; */
+  /* padding-top: 10px; */
+  min-height: 80vh;
   content: "";
   position: absolute;
-  top: 0;
+  top: 180px;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 20px;
 
   background: url("./assets/about-bg-4.png") no-repeat center center/cover;
+
   opacity: 0.9; /* Adjust the opacity here */
-  background-position: center;
+  background-position: top;
   z-index: -1; /* Send the pseudo-element behind the content */
 }
 
@@ -311,11 +372,12 @@ header {
 }
 
 #skills {
-  padding: 60px 0;
+  padding: 10px 0;
   text-align: center;
   min-height: 60vh;
   overflow: hidden;
   position: relative;
+  background: radial-gradient(rgb(117, 248, 187), rgba(0, 0, 0, 0.911));
 }
 
 #skills h2 {
@@ -761,4 +823,10 @@ footer .bottom {
 .footer-bottom ul li a:hover {
   color: white;
   background-color: rgb(51, 50, 50);
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+  }
 }

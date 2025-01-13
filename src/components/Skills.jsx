@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Parallax } from "./Parallax";
+import skillsParallaxImg from "../assets/skills2.gif";
 
 export const Skills = () => {
   const [HoveredIndex, setHoveredIndex] = useState(null);
@@ -88,37 +90,41 @@ export const Skills = () => {
   };
 
   return (
-    <section id="skills" className="gradient-bg">
-      <h2 className="title">My Skills</h2>
-      <div className="skills-grid">
-        {skillList.map((skill, index) => (
-          <div
-            className="skill animated fadeInUp"
-            key={index}
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
-          >
-            <i className={skill.iconClass} style={{ color: skill.color }}></i>
-            <h3>{skill.title}</h3>
-            {HoveredIndex === index ? (
-              <div className="progressbar">
-                <div className="outer-progressbar ">
-                  <div className="inner-progressbar flex-center">
-                    <div id={skill.id}>
-                      <SkillCounter
-                        target={skill.target}
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                      />
+    <section id="skills">
+      {/* <div className="parallax gradient-bg"></div> */}
+      <Parallax backgroundImage={skillsParallaxImg} title={"My Skills"} />
+      <div className="gradient-bg">
+        {/* <h2 className="title">My Skills</h2> */}
+        <div className="skills-grid">
+          {skillList.map((skill, index) => (
+            <div
+              className="skill animated fadeInUp"
+              key={index}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <i className={skill.iconClass} style={{ color: skill.color }}></i>
+              <h3>{skill.title}</h3>
+              {HoveredIndex === index ? (
+                <div className="progressbar">
+                  <div className="outer-progressbar ">
+                    <div className="inner-progressbar flex-center">
+                      <div id={skill.id}>
+                        <SkillCounter
+                          target={skill.target}
+                          onMouseEnter={handleMouseEnter}
+                          onMouseLeave={handleMouseLeave}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ) : (
-              ""
-            )}
-          </div>
-        ))}
+              ) : (
+                ""
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

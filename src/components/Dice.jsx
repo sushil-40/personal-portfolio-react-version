@@ -82,7 +82,7 @@ export const Dice = () => {
         {renderDiceFace()}
       </div>
       <button
-        className="btn btn-info mt-2 rounded"
+        className="btn btn-info mt-3 rounded"
         type="button"
         onClick={handleOnClick}
         disabled={isRolling} // Disable button while rolling

@@ -1,6 +1,8 @@
 import React from "react";
-import bImage from "../assets/b.jpg";
-import cImage from "../assets/skills2.gif";
+import flickstoreImage from "../assets/flickstore.png";
+import prankcalculatorImage from "../assets/prankcalculator.png";
+import timewiseImage from "../assets/timewise.png";
+import contactlistImage from "../assets/contactlist.png";
 
 export const Projects = () => {
   const projectList = [
@@ -8,26 +10,26 @@ export const Projects = () => {
       title: "Flick Store",
       description:
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
-      img: { path: bImage, alt: "project_2" },
+      img: { path: flickstoreImage, alt: "project_2" },
       alt: "project_1",
       backgroundColor: "red",
     },
     {
-      title: "User List",
+      title: "Prank Calculator",
       description:
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
-      img: { path: cImage, alt: "project_2" },
+      img: { path: prankcalculatorImage, alt: "project_2" },
     },
     {
       title: "TimeWise",
       description:
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
-      img: { path: bImage, alt: "project_3" },
+      img: { path: timewiseImage, alt: "project_3" },
     },
     {
-      title: "Travel Vlog",
+      title: "Contact List",
       description: "lorem ipsum dolor sit amet, consectetur adip",
-      img: { path: cImage, alt: "project_4" },
+      img: { path: contactlistImage, alt: "project_4" },
     },
   ];
   console.log(projectList);
