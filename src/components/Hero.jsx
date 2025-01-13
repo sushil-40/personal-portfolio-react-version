@@ -19,6 +19,7 @@ export const Hero = () => {
           <h1 className="lead  animated fadeInRight font-effect-shadow-multiple">
             Sushil Dangoriya
           </h1>
+          <hr className="m-1 hr-line" />
           <h2 className=" animated fadeInLeft font-effect-shadow-multiple">
             Web Developer & Designer
           </h2>
@@ -39,11 +40,11 @@ export const Hero = () => {
           </a>
         </div>
         <div className="right-content col-md-3">
-          <div className="my-image"></div>
+          {/* <div className="my-image"></div>
           <div className="outer-circle circle1">1</div>
           <div className="outer-circle circle2">2</div>
           <div className="outer-circle circle3">3</div>
-          <div className="outer-circle circle4">4</div>
+          <div className="outer-circle circle4">4</div> */}
         </div>
         {/* <div className="parallax"></div> */}
       </div>
