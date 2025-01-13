@@ -3,6 +3,8 @@ import flickstoreImage from "../assets/flickstore.png";
 import prankcalculatorImage from "../assets/prankcalculator.png";
 import timewiseImage from "../assets/timewise.png";
 import contactlistImage from "../assets/contactlist.png";
+import projectParallaxImage from "../assets/projects-section.png";
+import { Parallax } from "./Parallax";
 
 export const Projects = () => {
   const projectList = [
@@ -36,7 +38,8 @@ export const Projects = () => {
 
   return (
     <section id="projects">
-      <h2 className="title">My Projects</h2>
+      <Parallax backgroundImage={projectParallaxImage} title={"My Projects"} />
+      {/* <h2 className="title">My Projects</h2> */}
       <div className="projects-grid">
         {projectList.map((project, i) => {
           return (

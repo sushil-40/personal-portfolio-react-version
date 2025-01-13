@@ -15,7 +15,7 @@ export const Hero = () => {
         <Dice />
       </div> */}
       <div className="container hero-container d-flex">
-        <div className="left-content col-md-9">
+        <div className="left-content col-md-6">
           <h1 className="lead  animated fadeInRight font-effect-shadow-multiple">
             Sushil Dangoriya
           </h1>
