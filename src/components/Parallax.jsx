@@ -13,7 +13,12 @@ export const Parallax = ({ backgroundImage, title }) => {
     textTransform: "uppercase",
     letterSpacing: "0.5rem",
     backdropFilter: "blur(2px)",
-    boxShadow: "4px 4px 15px 8px blue",
+    // boxShadow: "4px 4px 15px 8px blue",
+    boxShadow: `6px 6px 15px rgba(35, 179, 204, 0.94),
+    -6px -4px 15px rgba(45, 45, 150, 0.69)`,
+    // boxShadow: `inset 5px 5px 10px  rgba(35, 179, 204, 0.94),
+    // inset -5px -5px 10px rgba(45, 45, 150, 0.69)`,
+    backdropfilter: "10px",
   };
   return (
     <div
