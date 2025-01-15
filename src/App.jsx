@@ -32,19 +32,36 @@ const App = () => {
     }
 
     // Animations on scroll
-    const animatedElements = document.querySelectorAll(".animated");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
+    // const animatedElements = document.querySelectorAll(".animated");
+    // const observer = new IntersectionObserver((entries) => {
+    //   entries.forEach((entry) => {
+    //     if (entry.isIntersecting) {
+    //       entry.target.classList.add("visible");
+    //       observer.unobserve(entry.target);
+    //     }
+    //   });
+    // });
+
+    // animatedElements.forEach((el) => {
+    //   observer.observe(el);
+    // });
+
+    //reveal on scroll
+
+    const sections = document.querySelectorAll(".reveal");
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < triggerBottom) {
+          section.classList.add("active");
+        } else {
+          section.classList.remove("active");
         }
       });
-    });
-
-    animatedElements.forEach((el) => {
-      observer.observe(el);
-    });
+    };
+    window.addEventListener("scroll", revealOnScroll);
   }, []);
 
   return (

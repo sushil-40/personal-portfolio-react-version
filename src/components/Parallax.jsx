@@ -22,7 +22,7 @@ export const Parallax = ({ backgroundImage, title }) => {
   };
   return (
     <div
-      className="parallax d-flex justify-content-center align-items-center"
+      className="parallax d-flex justify-content-center align-items-center "
       style={style}
     >
       <h2 className="title" style={styleContent}>

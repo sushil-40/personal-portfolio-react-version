@@ -40,28 +40,49 @@ export const Projects = () => {
     <section id="projects">
       <Parallax backgroundImage={projectParallaxImage} title={"My Projects"} />
       {/* <h2 className="title">My Projects</h2> */}
-      <div className="projects-grid">
-        {projectList.map((project, i) => {
-          return (
-            <div key={i} className="project">
-              <img
-                src={project.img.path}
-                alt={project.alt}
-                // height={50}
-                // width={50}
-              />
-              <div className="project-content">
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <a href="#" className="btn-tertiary">
-                  View Project
-                </a>
-              </div>
-            </div>
-          );
-        })}
+      {/* test of Accordian className Bootstrap  */}
+      <div className="accordion" id="accordionExample">
+        <div className="accordion-item">
+          <h2 className="accordion-header">
+            <button
+              className="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Completed Projet
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            className="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div className="accordion-body">
+              <div className="projects-grid">
+                {projectList.map((project, i) => {
+                  return (
+                    <div key={i} className="project">
+                      <img
+                        src={project.img.path}
+                        alt={project.alt}
+                        // height={50}
+                        // width={50}
+                      />
+                      <div className="project-content">
+                        <h3>{project.title}</h3>
+                        <p>{project.description}</p>
+                        <a href="#" className="btn-tertiary">
+                          View Project
+                        </a>
+                      </div>
+                    </div>
+                  );
+                })}
 
-        {/* <div className="project">
+                {/* <div className="project">
           <img src="project2.jpg" alt="Project 2" />
           <div className="project-content">
             <h3>Project Two</h3>
@@ -91,6 +112,40 @@ export const Projects = () => {
             </a>
           </div>
         </div> */}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="accordion-item">
+          <h2 className="accordion-header">
+            <button
+              className="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Running Project
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            className="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div className="accordion-body">
+              <strong>This is the second item's accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It's also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

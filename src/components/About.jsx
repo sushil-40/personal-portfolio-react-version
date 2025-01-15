@@ -22,7 +22,7 @@ export const About = () => {
           {/* </h2> */}
 
           <div className="container flex about-content">
-            <div className="my-bio reveal">
+            <div className="my-bio reveal ">
               <p>
                 Hi! I'm <span>Sushil Dangoriya</span>, a passionate web
                 developer with a strong focus on creating dynamic, responsive,

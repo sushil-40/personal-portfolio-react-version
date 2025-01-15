@@ -62,7 +62,7 @@ export const Footer = () => {
     //   <p>&copy; 2025 MyPortfolio. All rights reserved.</p> */}
     // </footer>
     <footer>
-      <div className="footer-container container d-flex flex-column">
+      <div className="footer-container container d-flex flex-column ">
         <div className="footer-top d-flex">
           <div>
             <h3>Open to work</h3>
@@ -71,7 +71,7 @@ export const Footer = () => {
             <button className="btn-contact-me m-2">Contact me</button>
           </div>
         </div>
-        <div className="footer-bottom">
+        <div className="footer-bottom reveal">
           <div className="row footer-bottom-content d-flex">
             <div className="col-md-4 copyright-info mt-4">
               &copy; Copy right all reserved 2024 || Sushil Dangoriya 🚀
