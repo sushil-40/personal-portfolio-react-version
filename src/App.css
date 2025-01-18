@@ -83,13 +83,6 @@ header {
 }
 
 /* Hero Section */
-.circle {
-  height: 150px;
-  width: 150px; /* Add width to create a proper circle */
-  background: green;
-  border-radius: 50%;
-  position: relative;
-}
 
 /*    Dice Implementation   */
 .dice {
@@ -169,6 +162,10 @@ header {
 }
 #hero {
   min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
   /* padding-top: 20px; */
   background: url("./assets/hbg-1.png") no-repeat center;
 
@@ -221,31 +218,6 @@ header {
   position: relative;
   /* backdrop-filter: blur(0); */
 }
-.my-image {
-  background: url("./assets/sus-bg.png") no-repeat;
-  background-size: cover;
-  background-position: initial;
-  height: 200px;
-  width: 200px;
-  /* border-radius: 50%; */
-  clip-path: polygon(
-    20% 0%,
-    /* Top-left (shorter distance from the left) */ 80% 0%,
-    /* Top-right (shorter distance from the right) */ 100% 50%,
-    /* Middle-right (aligned to 50% height) */ 80% 100%,
-    /* Bottom-right */ 20% 100%,
-    /* Bottom-left */ 0% 50% /* Middle-left (aligned to 50% height) */
-  );
-
-  /* opacity: 0.8; */
-  box-shadow: 6px 6px 15px rgba(32, 31, 31, 0.938),
-    -6px -4px 15px rgba(239, 239, 245, 0.932);
-  backdrop-filter: 10px;
-  /* backdrop-filter: blur(20px); */
-  /* border: 1px dotted darkgray; */
-  /* z-index: 4; */
-  /* opacity: 1; */
-}
 
 /*   test start   */
 .cube {
@@ -261,8 +233,6 @@ header {
   position: absolute;
   width: 200px;
   height: 200px;
-  /* background: url("./assets/sus-bg.png") no-repeat;
-  background-size: cover; */
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid #161515;
 }
@@ -293,7 +263,7 @@ header {
   transform: rotateX(90deg) translateZ(100px);
 }
 .bottom {
-  background: url("./assets/skills2.gif") no-repeat;
+  background: url("./assets/fbg-4.png") no-repeat;
   background-size: cover;
   transform: rotateX(-90deg) translateZ(100px);
 }
@@ -490,6 +460,9 @@ header {
   /* background-color: rgba(255, 255, 255, 0.2); */
   background-color: wheat;
   color: var(--color-orange);
+  box-shadow: inset 5px 5px 10px rgba(29, 3, 3, 0.918),
+    inset -5px -5px 10px rgba(245, 245, 245, 0.979);
+
   /* transition: 3s linear ease-in-out; */
   /* nested hover for inner-progressbar  */
   .inner-progressbar {

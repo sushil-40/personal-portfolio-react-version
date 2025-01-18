@@ -4,10 +4,7 @@ import { Dice } from "./Dice";
 
 export const Hero = () => {
   return (
-    <section
-      id="hero"
-      className="d-flex align-items-center justify-content-center flex-column text-center"
-    >
+    <section id="hero" className="d-flex">
       {/* 
       <AnimatedIcons /> */}
       {/* 
@@ -15,7 +12,7 @@ export const Hero = () => {
         <Dice />
       </div> */}
       <div className="container hero-container d-flex">
-        <div className="left-content col-md-6">
+        <div className="left-content col-md-6 ">
           <h1 className="lead  animated fadeInRight font-effect-shadow-multiple">
             Sushil Dangoriya
           </h1>
@@ -28,7 +25,7 @@ export const Hero = () => {
           </p>
           <a
             href="#projects"
-            className="btn btn-primary btn-lg animated fadeInUp"
+            className="btn btn-primary btn-lg animated fadeInUp "
           >
             Explore My Work
           </a>
@@ -40,11 +37,6 @@ export const Hero = () => {
           </a>
         </div>
         <div className="right-content col-md-3">
-          {/* <div className="my-image"></div>
-          <div className="outer-circle circle1">1</div>
-          <div className="outer-circle circle2">2</div>
-          <div className="outer-circle circle3">3</div>
-          <div className="outer-circle circle4">4</div> */}
           <div className="cube">
             <div className="face front"></div>
             <div className="face back"></div>

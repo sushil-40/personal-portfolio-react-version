@@ -9,6 +9,7 @@ import { Parallax } from "./Parallax";
 export const Projects = () => {
   const projectList = [
     {
+      id: 1,
       title: "Flick Store",
       description:
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
@@ -17,18 +18,21 @@ export const Projects = () => {
       backgroundColor: "red",
     },
     {
+      id: 2,
       title: "Prank Calculator",
       description:
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
       img: { path: prankcalculatorImage, alt: "project_2" },
     },
     {
+      id: 3,
       title: "TimeWise",
       description:
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
       img: { path: timewiseImage, alt: "project_3" },
     },
     {
+      id: 4,
       title: "Contact List",
       description: "lorem ipsum dolor sit amet, consectetur adip",
       img: { path: contactlistImage, alt: "project_4" },
@@ -36,7 +40,10 @@ export const Projects = () => {
   ];
 
   const [showOffcanvas, setShowOffcanvas] = useState(false);
-  const toggleOffcanvas = () => {
+  const [toggledProject, setToggledProject] = useState([]);
+  const toggleOffcanvas = (id) => {
+    const filteredProject = projectList.find((prj) => prj.id === id);
+    setToggledProject(filteredProject);
     setShowOffcanvas(!showOffcanvas);
   };
   return (
@@ -55,7 +62,9 @@ export const Projects = () => {
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              <span className="title completed-project">Completed Project</span>
+              <span className="title completed-project">
+                Explore Completed Projects
+              </span>
             </button>
           </h2>
           <div
@@ -88,7 +97,7 @@ export const Projects = () => {
                         <p>{project.description.slice(0, 100) + " ...."}</p>
                         <button
                           className="btn project-btn btn-tertiary"
-                          onClick={toggleOffcanvas}
+                          onClick={() => toggleOffcanvas(project.id)}
                           type="button"
                           data-bs-toggle="offcanvas"
                           data-bs-target="#offcanvasWithBothOptions"
@@ -96,17 +105,10 @@ export const Projects = () => {
                         >
                           View Project
                         </button>
-                        {/* <div className="project-btn">
-                          <a href="#" className="btn-tertiary">
-                            View Project
-                            
-                          </a>
-                        </div> */}
                       </div>
                     </div>
                   );
                 })}
-                {/* test  */}
 
                 <div
                   className={`offcanvas offcanvas-start w-50  text-bg-dark ${
@@ -117,26 +119,62 @@ export const Projects = () => {
                   id="offcanvasWithBothOptions"
                   aria-labelledby="offcanvasWithBothOptionsLabel"
                 >
-                  <div className="offcanvas-header">
-                    <h5
-                      className="offcanvas-title"
-                      id="offcanvasWithBothOptionsLabel"
-                    >
-                      Backdrop with scrolling
-                    </h5>
-                    <button
-                      type="button"
-                      className="btn-close"
-                      onClick={toggleOffcanvas}
-                      data-bs-dismiss="offcanvas"
-                      aria-label="Close"
-                    ></button>
+                  <div className="offcanvas-header d-flex justify-content-center align-items-center gap-5">
+                    <div>
+                      <h5
+                        className="offcanvas-title"
+                        id="offcanvasWithBothOptionsLabel"
+                      >
+                        {/* Backdrop with scrolling */}
+                        {toggledProject.title}
+                      </h5>
+                    </div>
+                    <div>
+                      <button
+                        type="button"
+                        className="btn-close"
+                        onClick={toggleOffcanvas}
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close"
+                      ></button>
+                    </div>
                   </div>
                   <div className="offcanvas-body">
-                    <p>
-                      Try scrolling the rest of the page to see this option in
-                      action.
-                    </p>
+                    {toggledProject && (
+                      <>
+                        <div className="video-demo">
+                          <img
+                            src={toggledProject.img?.path}
+                            alt={toggledProject.img?.alt || "Project image"}
+                            height={350}
+                            width={550}
+                          />
+                        </div>
+                        <div
+                          className="link d-flex flex-wrap gap-5 justify-content-center align-items-center"
+                          style={{ color: "Violet", fontSize: "35px" }}
+                        >
+                          <a href="">
+                            <i className="fa-brands fa-github"></i>
+                          </a>
+                          <a href="">
+                            <i className="fa-brands fa-chrome"></i>
+                          </a>
+                        </div>
+                        <div className="project-details">
+                          <h4 style={{ color: "SlateBlue" }}>
+                            Technology Used <hr className="container" />
+                          </h4>
+                          <p>Html, Css, JavaScript, React</p>
+                          <hr />
+                          <h4 style={{ color: "SlateBlue" }}>
+                            Description <hr className="container" />
+                          </h4>
+                          <p>{toggledProject.description}</p>
+                          <hr />
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
@@ -154,7 +192,7 @@ export const Projects = () => {
               aria-controls="collapseTwo"
             >
               <span className="title running-project" style={{ width: "80%" }}>
-                Running Projects
+                Explore Running Projects
               </span>
             </button>
           </h2>
