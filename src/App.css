@@ -248,7 +248,7 @@ header {
   transform: rotateY(180deg) translateZ(100px);
 }
 .left {
-  background: url("./assets/abt-para-1.png") no-repeat;
+  background: url("./assets/dice-face/face-i.png") no-repeat;
   background-size: cover;
   transform: rotateY(-90deg) translateZ(100px);
 }
@@ -258,7 +258,8 @@ header {
   transform: rotateY(90deg) translateZ(100px);
 }
 .top {
-  background: url("./assets/projects-section.png") no-repeat;
+  /* background: url("./assets/projects-section.png") no-repeat; */
+  background: url("./assets/dice-face/face-v.png") no-repeat;
   background-size: cover;
   transform: rotateX(90deg) translateZ(100px);
 }
@@ -277,6 +278,13 @@ header {
   }
 }
 
+/* roll dice implementation */
+.hidden-dice {
+  display: none;
+}
+.show-hidden-dice {
+  display: block;
+}
 #hero .container {
   /* margin-top: 80px; */
   position: relative;
