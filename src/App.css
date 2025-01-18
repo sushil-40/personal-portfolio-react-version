@@ -485,7 +485,6 @@ header {
   font-size: 1.7em;
   margin-bottom: 15px;
   color: rgba(43, 102, 136, 0.973);
-  /* opacity: 0.9; */
 }
 
 .project p {
@@ -593,7 +592,7 @@ button[type="submit"]:hover {
   color: #fff;
 }
 
-/* Footer */
+/* =================================== Footer Section ============================================ */
 footer {
   min-height: 20vh;
   background: linear-gradient(
@@ -653,7 +652,88 @@ footer .bottom {
   margin-bottom: 1.5rem;
 }
 
-/* Animations */
+.footer-container {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -30px;
+}
+.footer-top {
+  width: 100%;
+  justify-content: space-between;
+
+  align-items: center;
+  height: 90px;
+  margin-bottom: 30px;
+  flex-wrap: nowrap;
+  background: rgb(6, 59, 95);
+  box-shadow: -10px 20px 14px rgba(17, 17, 17, 0.788); /* Horizontal, Vertical, Blur, Color */
+}
+.footer-top h3 {
+  margin-left: 20px;
+  margin-top: 20px;
+  padding: 20px;
+}
+.footer-top p {
+  color: rgb(0, 0, 0);
+  margin-top: -20px;
+  margin-left: 45px;
+}
+
+.btn-contact-me {
+  background: linear-gradient(rgb(99, 177, 241), rgb(2, 5, 34));
+  color: white;
+  box-shadow: inset 5px 5px 10px rgba(35, 179, 204, 0.94),
+    inset -5px -5px 10px rgba(45, 45, 150, 0.69);
+  transition: transform 0.3s ease;
+}
+.btn-contact-me:hover {
+  transform: rotate(35deg);
+}
+.list-social-network {
+  margin-bottom: 15px;
+}
+
+.list-social-network li {
+  display: inline-block;
+
+  margin: 0 10px;
+
+  transition: transform 0.5s ease;
+}
+.list-social-network li:hover {
+  transform: scale(1.5);
+  background: black;
+}
+
+.list-social-network li a {
+  color: #15066b;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.list-social-network li a:hover {
+  color: #e8491d;
+}
+.footer-bottom-content {
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  gap: 30px;
+}
+
+.footer-bottom ul li {
+  color: black;
+}
+.footer-bottom ul li a {
+  transition: background-color 0.4s ease;
+}
+.footer-bottom ul li a:hover {
+  color: white;
+  background-color: rgb(51, 50, 50);
+}
+
+/* ================================== Animations ===================================== */
 @keyframes slideInLeft {
   from {
     opacity: 0;
@@ -698,97 +778,7 @@ footer .bottom {
     transform: translateY(0);
   }
 }
-
-.footer-container {
-  justify-content: center;
-  align-items: center;
-  /* background: purple; */
-  position: relative;
-  top: -30px;
-}
-.footer-top {
-  width: 100%;
-  justify-content: space-between;
-
-  align-items: center;
-  height: 90px;
-  margin-bottom: 30px;
-  flex-wrap: nowrap;
-  /* position: relative;
-  
-  top: -30px; */
-  background: rgb(6, 59, 95);
-  box-shadow: -10px 20px 14px rgba(17, 17, 17, 0.788); /* Horizontal, Vertical, Blur, Color */
-}
-.footer-top h3 {
-  margin-left: 20px;
-  margin-top: 20px;
-  padding: 20px;
-}
-.footer-top p {
-  color: rgb(0, 0, 0);
-  margin-top: -20px;
-  margin-left: 45px;
-}
-
-.btn-contact-me {
-  background: linear-gradient(rgb(99, 177, 241), rgb(2, 5, 34));
-  color: white;
-  box-shadow: inset 5px 5px 10px rgba(35, 179, 204, 0.94),
-    inset -5px -5px 10px rgba(45, 45, 150, 0.69);
-  transition: transform 0.3s ease;
-}
-.btn-contact-me:hover {
-  transform: rotate(35deg);
-}
-.list-social-network {
-  margin-bottom: 15px;
-}
-/* .list-social-network:hover {
-  margin-bottom: 15px;
-  transform: scale(1.5);
-} */
-
-.list-social-network li {
-  display: inline-block;
-
-  margin: 0 10px;
-
-  transition: transform 0.5s ease;
-}
-.list-social-network li:hover {
-  transform: scale(1.5);
-  background: black;
-}
-
-.list-social-network li a {
-  color: #15066b;
-  font-size: 1.5em;
-  transition: color 0.3s ease;
-}
-
-.list-social-network li a:hover {
-  color: #e8491d;
-  /* transform: scale(2); */
-}
-.footer-bottom-content {
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  gap: 30px;
-}
-
-.footer-bottom ul li {
-  color: black;
-}
-.footer-bottom ul li a {
-  transition: background-color 0.4s ease;
-}
-.footer-bottom ul li a:hover {
-  color: white;
-  background-color: rgb(51, 50, 50);
-}
-
+/* =========================== Media Queries =========================== */
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column;
