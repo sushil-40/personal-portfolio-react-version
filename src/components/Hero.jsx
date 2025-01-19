@@ -10,7 +10,7 @@ import diceFace6 from "../assets/dice-face/face-vi.png";
 
 export const Hero = () => {
   const [showButtonRoll, setShowButtonRoll] = useState("hidden-dice");
-  const [showDiceFace, setShowDiceFace] = useState(true);
+  const [frontFace, setFrontFace] = useState();
   const bgFaceOfDiceStyle = [
     { id: 1, path: diceFace1 },
     { id: 2, path: diceFace2 },
@@ -25,6 +25,16 @@ export const Hero = () => {
       prevClass === "hidden-dice" ? "show-hidden-dice" : "hidden-dice"
     );
   };
+  const handleOnRollDiceClicked = () => {
+    setFrontFace(Math.floor(Math.random() * 6) + 1);
+  };
+  // Get the dice image based on the frontFace value
+  // const frontFaceImage = frontFace ? bgFaceOfDiceStyle.find(face => face.id === frontFace).path : diceFace1;
+  const topFaceImage = frontFace
+    ? bgFaceOfDiceStyle.find((face) => face.id === frontFace).path
+    : diceFace5;
+
+  console.log(frontFace);
   return (
     <section id="hero" className="d-flex">
       {/* 
@@ -101,7 +111,7 @@ export const Hero = () => {
               style={{
                 backgroundImage:
                   showButtonRoll === "show-hidden-dice"
-                    ? `url(${diceFace5})`
+                    ? `url(${topFaceImage})`
                     : "",
               }}
             ></div>
@@ -117,7 +127,12 @@ export const Hero = () => {
           </div>
           <div className="btn-magic  p-5">
             <p className={showButtonRoll}>
-              <button className="btn btn-dark">Roll Dice</button>
+              <button
+                onClick={handleOnRollDiceClicked}
+                className="btn btn-dark"
+              >
+                Roll Dice
+              </button>
             </p>
             <p>
               <button onClick={handleOnClickReveal} className="btn btn-info">
