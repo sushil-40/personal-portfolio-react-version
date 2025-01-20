@@ -49,8 +49,7 @@ export const Projects = () => {
   return (
     <section id="projects">
       <Parallax backgroundImage={projectParallaxImage} title={"My Projects"} />
-      {/* <h2 className="title">My Projects</h2> */}
-      {/* test of Accordian className Bootstrap  */}
+
       <div className="accordion" id="accordionExample">
         <div className="accordion-item">
           <h2 className="accordion-header">
@@ -86,7 +85,7 @@ export const Projects = () => {
                       <div className="project-content">
                         <div className="links">
                           <a href="">
-                            <i className="fa-brands fa-github"></i>{" "}
+                            <i className="fa-brands fa-github"></i>
                           </a>
                           <a href="">
                             <i className="fa-brands fa-chrome"></i>
@@ -111,7 +110,7 @@ export const Projects = () => {
                 })}
 
                 <div
-                  className={`offcanvas offcanvas-start w-50  text-bg-dark ${
+                  className={`offcanvas offcanvas-end w-50  text-bg-dark ${
                     showOffcanvas ? "show" : ""
                   }`}
                   data-bs-scroll="true"

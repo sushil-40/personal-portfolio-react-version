@@ -118,7 +118,7 @@ header {
 /* ========================================== Hero Section ================================ */
 
 #hero {
-  min-height: 100vh;
+  min-height: 140vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;

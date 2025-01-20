@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Parallax } from "./Parallax";
-import skillsParallaxImg from "../assets/skills2.gif";
+// import skillsParallaxImg from "../assets/skills2.gif";
 import skillsParallaxImg1 from "../assets/abt-para-1.png";
-import skillsParallaxImg2 from "../assets/abt-para-2.png";
+// import skillsParallaxImg2 from "../assets/abt-para-2.png";
 export const Skills = () => {
   const [HoveredIndex, setHoveredIndex] = useState(null);
 

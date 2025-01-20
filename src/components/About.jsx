@@ -9,18 +9,9 @@ export const About = () => {
   return (
     <section id="about">
       <Parallax backgroundImage={parallaxAboutImg} title={"About Me"} />
-      {/* <div className="parallax  d-flex justify-content-center align-items-center">
-        <h2 className="title">About Me</h2>
-      </div> */}
+
       <div className="container">
-        {/* <div className="about-content animated fadeInLeft"> */}
         <div className="test mt-5">
-          {/* <h2 className="title">About Me</h2> */}
-
-          {/* <h2 class="title">
-          <span>About Me</span> */}
-          {/* </h2> */}
-
           <div className="container flex about-content">
             <div className="my-bio reveal ">
               <p>
@@ -44,7 +35,6 @@ export const About = () => {
           </div>
         </div>
       </div>
-      {/* </div> */}
     </section>
   );
 };

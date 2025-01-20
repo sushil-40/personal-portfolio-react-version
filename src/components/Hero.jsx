@@ -34,7 +34,10 @@ export const Hero = () => {
   // animation: rotate 5s infinite linear;
 
   const handleOnRollDiceClicked = () => {
-    setResultFace(Math.floor(Math.random() * 6) + 1);
+    setTimeout(() => {
+      setResultFace(Math.floor(Math.random() * 6) + 1);
+    }, 1000);
+
     setAnimationClass("");
     setTimeout(() => {
       setAnimationClass("spin-animation");
@@ -149,7 +152,7 @@ export const Hero = () => {
             <p className={showButtonRoll}>
               <button
                 onClick={handleOnRollDiceClicked}
-                className="btn btn-dark"
+                className="btn btn-dark roll-dice"
               >
                 Roll Dice
               </button>
@@ -161,7 +164,6 @@ export const Hero = () => {
             </p>
           </div>
         </div>
-        {/* <div className="parallax"></div> */}
       </div>
     </section>
   );
