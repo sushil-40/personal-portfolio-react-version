@@ -118,7 +118,7 @@ header {
 /* ========================================== Hero Section ================================ */
 
 #hero {
-  min-height: 140vh;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -464,7 +464,10 @@ header {
   background: url("./assets/prj-2.png") no-repeat;
   background-size: cover;
 }
-
+video {
+  max-width: 100%;
+  height: auto;
+}
 #projects h2 {
   font-size: 2.5em;
   margin-bottom: 40px;

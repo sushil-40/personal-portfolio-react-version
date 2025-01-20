@@ -1,9 +1,7 @@
 import React from "react";
-import profileImage from "../assets/myPicture.png";
-import { Dice } from "./Dice";
+
 import { Parallax } from "./Parallax";
 import parallaxAboutImg from "../assets/bg-2.webp";
-import parallaxAboutImg1 from "../assets/abt-para-1.png";
 
 export const About = () => {
   return (

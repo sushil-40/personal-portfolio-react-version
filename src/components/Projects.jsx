@@ -6,6 +6,7 @@ import contactlistImage from "../assets/contactlist.png";
 import projectParallaxImage from "../assets/projects-section.png";
 import { Parallax } from "./Parallax";
 
+import contactListDemo from "../assets/video-demo/contact-list-demo.mp4";
 export const Projects = () => {
   const projectList = [
     {
@@ -82,6 +83,7 @@ export const Projects = () => {
                         // height={50}
                         // width={50}
                       />
+
                       <div className="project-content">
                         <div className="links">
                           <a href="">
@@ -141,13 +143,20 @@ export const Projects = () => {
                   <div className="offcanvas-body">
                     {toggledProject && (
                       <>
-                        <div className="video-demo">
-                          <img
-                            src={toggledProject.img?.path}
-                            alt={toggledProject.img?.alt || "Project image"}
-                            height={350}
-                            width={550}
-                          />
+                        <div className="video-demo d-flex justify-content-center align-items-center w-100">
+                          <video
+                            preload="metadata"
+                            controls
+                            poster={contactlistImage}
+                            style={{
+                              marginLeft: "auto",
+                              marginRight: "auto",
+                              display: "block",
+                            }}
+                          >
+                            <source src={contactListDemo} type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
                         </div>
                         <div
                           className="link d-flex flex-wrap gap-5 justify-content-center align-items-center"

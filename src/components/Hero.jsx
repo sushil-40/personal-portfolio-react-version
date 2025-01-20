@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import AnimatedIcons from "./AnimatedIcon";
-import { Dice } from "./Dice";
+
 import diceFace1 from "../assets/dice-face/face-i.png";
 import diceFace2 from "../assets/dice-face/face-ii.png";
 import diceFace3 from "../assets/dice-face/face-iii.png";
@@ -21,17 +20,13 @@ export const Hero = () => {
     { id: 5, path: diceFace5 },
     { id: 6, path: diceFace6 },
   ];
-  // const cubeStyle = { id: 1, color: "blue", Animation: "rotate 5s linear 2" };
+
   const handleOnClickReveal = () => {
     setShowButtonRoll((prevClass) =>
       prevClass === "hidden-dice" ? "show-hidden-dice" : "hidden-dice"
     );
     setIsBlurred(false);
   };
-
-  // setAnimationClass("");
-  // transform: rotateX(-30deg) rotateY(30deg);
-  // animation: rotate 5s infinite linear;
 
   const handleOnRollDiceClicked = () => {
     setTimeout(() => {
@@ -46,7 +41,7 @@ export const Hero = () => {
     setIsBlurred(true);
   };
   // Get the dice image based on the frontFace value
-  // const frontFaceImage = frontFace ? bgFaceOfDiceStyle.find(face => face.id === frontFace).path : diceFace1;
+
   const topFaceImage = resultFace
     ? bgFaceOfDiceStyle.find((face) => face.id === resultFace).path
     : diceFace5;

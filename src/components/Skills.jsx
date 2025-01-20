@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Parallax } from "./Parallax";
-// import skillsParallaxImg from "../assets/skills2.gif";
+
 import skillsParallaxImg1 from "../assets/abt-para-1.png";
-// import skillsParallaxImg2 from "../assets/abt-para-2.png";
+
 export const Skills = () => {
   const [HoveredIndex, setHoveredIndex] = useState(null);
 
@@ -92,10 +92,8 @@ export const Skills = () => {
 
   return (
     <section id="skills">
-      {/* <div className="parallax gradient-bg"></div> */}
       <Parallax backgroundImage={skillsParallaxImg1} title={"My Skills"} />
       <div className="gradient-bg">
-        {/* <h2 className="title">My Skills</h2> */}
         <div className="skills-grid">
           {skillList.map((skill, index) => (
             <div
