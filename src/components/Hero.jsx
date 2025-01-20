@@ -9,8 +9,10 @@ import diceFace5 from "../assets/dice-face/face-v.png";
 import diceFace6 from "../assets/dice-face/face-vi.png";
 
 export const Hero = () => {
+  const [isBlurred, setIsBlurred] = useState(false);
   const [showButtonRoll, setShowButtonRoll] = useState("hidden-dice");
-  const [frontFace, setFrontFace] = useState();
+  const [resultFace, setResultFace] = useState();
+  const [animationClass, setAnimationClass] = useState("");
   const bgFaceOfDiceStyle = [
     { id: 1, path: diceFace1 },
     { id: 2, path: diceFace2 },
@@ -19,30 +21,36 @@ export const Hero = () => {
     { id: 5, path: diceFace5 },
     { id: 6, path: diceFace6 },
   ];
-
+  // const cubeStyle = { id: 1, color: "blue", Animation: "rotate 5s linear 2" };
   const handleOnClickReveal = () => {
     setShowButtonRoll((prevClass) =>
       prevClass === "hidden-dice" ? "show-hidden-dice" : "hidden-dice"
     );
+    setIsBlurred(false);
   };
+
+  // setAnimationClass("");
+  // transform: rotateX(-30deg) rotateY(30deg);
+  // animation: rotate 5s infinite linear;
+
   const handleOnRollDiceClicked = () => {
-    setFrontFace(Math.floor(Math.random() * 6) + 1);
+    setResultFace(Math.floor(Math.random() * 6) + 1);
+    setAnimationClass("");
+    setTimeout(() => {
+      setAnimationClass("spin-animation");
+    }, 50);
+
+    setIsBlurred(true);
   };
   // Get the dice image based on the frontFace value
   // const frontFaceImage = frontFace ? bgFaceOfDiceStyle.find(face => face.id === frontFace).path : diceFace1;
-  const topFaceImage = frontFace
-    ? bgFaceOfDiceStyle.find((face) => face.id === frontFace).path
+  const topFaceImage = resultFace
+    ? bgFaceOfDiceStyle.find((face) => face.id === resultFace).path
     : diceFace5;
 
-  console.log(frontFace);
+  console.log(resultFace);
   return (
     <section id="hero" className="d-flex">
-      {/* 
-      <AnimatedIcons /> */}
-      {/* 
-      <div className="roll-dice">
-        <Dice />
-      </div> */}
       <div className="container hero-container d-flex">
         <div className="left-content col-md-6 ">
           <h1 className="lead  animated fadeInRight font-effect-shadow-multiple">
@@ -69,18 +77,24 @@ export const Hero = () => {
           </a>
         </div>
         <div className="right-content col-md-4 flex-column">
-          <div className="cube m-5">
+          <div className={`cube m-5 ${animationClass}`}>
             <div
-              className="face front"
+              className={`face front ${
+                isBlurred && resultFace !== 5 ? "blur" : ""
+              }`}
               style={{
                 backgroundImage:
                   showButtonRoll === "show-hidden-dice"
                     ? `url(${diceFace1})`
                     : "",
+                opacity: showButtonRoll === "show-hidden-dice" ? "0.8" : "1",
+                // background: `${cubeStyle.color}`,
               }}
             ></div>
             <div
-              className="face back"
+              className={`face back ${
+                isBlurred && resultFace !== 5 ? "blur" : ""
+              }`}
               style={{
                 backgroundImage:
                   showButtonRoll === "show-hidden-dice"
@@ -89,7 +103,9 @@ export const Hero = () => {
               }}
             ></div>
             <div
-              className="face left"
+              className={`face left ${
+                isBlurred && resultFace !== 5 ? "blur" : ""
+              }`}
               style={{
                 backgroundImage:
                   showButtonRoll === "show-hidden-dice"
@@ -98,7 +114,9 @@ export const Hero = () => {
               }}
             ></div>
             <div
-              className="face right"
+              className={`face right ${
+                isBlurred && resultFace !== 5 ? "blur" : ""
+              }`}
               style={{
                 backgroundImage:
                   showButtonRoll === "show-hidden-dice"
@@ -116,7 +134,9 @@ export const Hero = () => {
               }}
             ></div>
             <div
-              className="face bottom"
+              className={`face bottom ${
+                isBlurred && resultFace !== 5 ? "blur" : ""
+              }`}
               style={{
                 backgroundImage:
                   showButtonRoll === "show-hidden-dice"
