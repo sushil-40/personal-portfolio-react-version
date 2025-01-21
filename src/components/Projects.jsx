@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import flickstoreImage from "../assets/flickstore.png";
 import prankcalculatorImage from "../assets/prankcalculator.png";
 import timewiseImage from "../assets/timewise.png";
@@ -48,15 +48,34 @@ export const Projects = () => {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
   const [toggledProject, setToggledProject] = useState([]);
   const toggleOffcanvas = (id) => {
-    if (showOffcanvas) {
-      setToggledProject([]);
+    const filteredProject = projectList.find((prj) => prj.id === id);
+    // setToggledProject(filteredProject);
+    // setShowOffcanvas(true);
+    if (filteredProject.id === toggledProject?.id && showOffcanvas) {
+      setToggledProject(null);
       setShowOffcanvas(false);
     } else {
-      const filteredProject = projectList.find((prj) => prj.id === id);
       setToggledProject(filteredProject);
-      setShowOffcanvas(true);
+      setShowOffcanvas(false);
     }
   };
+
+  useEffect(() => {
+    const offcanvasElement = document.getElementById(
+      "offcanvasWithBothOptions"
+    );
+    const handleHide = () => {
+      setToggledProject(null);
+    };
+    if (offcanvasElement) {
+      offcanvasElement.addEventListener("hidden.bs.offcanvas", handleHide);
+    }
+    return () => {
+      if (offcanvasElement) {
+        offcanvasElement.removeEventListener("hidden.bs.offcanvas", handleHide);
+      }
+    };
+  }, []);
   return (
     <section id="projects">
       <Parallax backgroundImage={projectParallaxImage} title={"My Projects"} />
@@ -129,6 +148,7 @@ export const Projects = () => {
                   tabIndex="-1"
                   id="offcanvasWithBothOptions"
                   aria-labelledby="offcanvasWithBothOptionsLabel"
+                  // onHide={() => setToggledProject(null)}
                 >
                   <div className="offcanvas-header d-flex justify-content-center align-items-center gap-5">
                     <div>
@@ -137,7 +157,7 @@ export const Projects = () => {
                         id="offcanvasWithBothOptionsLabel"
                       >
                         {/* Backdrop with scrolling */}
-                        {toggledProject.title}
+                        {toggledProject?.title}
                       </h5>
                     </div>
                     <div>
@@ -157,7 +177,7 @@ export const Projects = () => {
                           <video
                             preload="metadata"
                             controls
-                            poster={toggledProject.img.path}
+                            poster={toggledProject?.img?.path}
                             style={{
                               marginLeft: "auto",
                               marginRight: "auto",
@@ -165,7 +185,7 @@ export const Projects = () => {
                             }}
                           >
                             <source
-                              src={toggledProject.projectDemo.video}
+                              src={toggledProject?.projectDemo?.video}
                               type="video/mp4"
                             />
                             Your browser does not support the video tag.
