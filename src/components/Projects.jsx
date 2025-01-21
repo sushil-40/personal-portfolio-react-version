@@ -7,6 +7,7 @@ import projectParallaxImage from "../assets/projects-section.png";
 import { Parallax } from "./Parallax";
 
 import contactListDemo from "../assets/video-demo/contact-list-demo.mp4";
+import flickStoreDemo from "../assets/video-demo/flick-store-demo.mp4";
 export const Projects = () => {
   const projectList = [
     {
@@ -17,6 +18,7 @@ export const Projects = () => {
       img: { path: flickstoreImage, alt: "project_2" },
       alt: "project_1",
       backgroundColor: "red",
+      projectDemo: { video: flickStoreDemo },
     },
     {
       id: 2,
@@ -24,6 +26,7 @@ export const Projects = () => {
       description:
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
       img: { path: prankcalculatorImage, alt: "project_2" },
+      projectDemo: { video: contactListDemo },
     },
     {
       id: 3,
@@ -31,21 +34,28 @@ export const Projects = () => {
       description:
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
       img: { path: timewiseImage, alt: "project_3" },
+      projectDemo: { video: contactListDemo },
     },
     {
       id: 4,
       title: "Contact List",
       description: "lorem ipsum dolor sit amet, consectetur adip",
       img: { path: contactlistImage, alt: "project_4" },
+      projectDemo: { video: contactListDemo },
     },
   ];
 
   const [showOffcanvas, setShowOffcanvas] = useState(false);
   const [toggledProject, setToggledProject] = useState([]);
   const toggleOffcanvas = (id) => {
-    const filteredProject = projectList.find((prj) => prj.id === id);
-    setToggledProject(filteredProject);
-    setShowOffcanvas(!showOffcanvas);
+    if (showOffcanvas) {
+      setToggledProject([]);
+      setShowOffcanvas(false);
+    } else {
+      const filteredProject = projectList.find((prj) => prj.id === id);
+      setToggledProject(filteredProject);
+      setShowOffcanvas(true);
+    }
   };
   return (
     <section id="projects">
@@ -141,20 +151,23 @@ export const Projects = () => {
                     </div>
                   </div>
                   <div className="offcanvas-body">
-                    {toggledProject && (
+                    {toggledProject?.projectDemo && (
                       <>
                         <div className="video-demo d-flex justify-content-center align-items-center w-100">
                           <video
                             preload="metadata"
                             controls
-                            poster={contactlistImage}
+                            poster={toggledProject.img.path}
                             style={{
                               marginLeft: "auto",
                               marginRight: "auto",
                               display: "block",
                             }}
                           >
-                            <source src={contactListDemo} type="video/mp4" />
+                            <source
+                              src={toggledProject.projectDemo.video}
+                              type="video/mp4"
+                            />
                             Your browser does not support the video tag.
                           </video>
                         </div>
