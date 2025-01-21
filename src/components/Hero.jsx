@@ -46,7 +46,40 @@ export const Hero = () => {
     ? bgFaceOfDiceStyle.find((face) => face.id === resultFace).path
     : diceFace5;
 
-  console.log(resultFace);
+  // Scroll to the appropriate section based on the dice roll
+  setTimeout(() => {
+    switch (resultFace) {
+      case 1:
+        document.getElementById("hero").scrollIntoView({ behavior: "smooth" });
+        break;
+      case 2:
+        document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+        break;
+      case 3:
+        document
+          .getElementById("skills")
+          .scrollIntoView({ behavior: "smooth" });
+        break;
+      case 4:
+        document
+          .getElementById("projects")
+          .scrollIntoView({ behavior: "smooth" });
+        break;
+      case 5:
+        document
+          .getElementById("contact")
+          .scrollIntoView({ behavior: "smooth" });
+        break;
+      case 6:
+        document
+          .getElementById("footer")
+          .scrollIntoView({ behavior: "smooth" });
+        break;
+      default:
+        break;
+    }
+  }, 3000);
+
   return (
     <section id="hero" className="d-flex">
       <div className="container hero-container d-flex">

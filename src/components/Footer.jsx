@@ -2,7 +2,7 @@ import React from "react";
 
 export const Footer = () => {
   return (
-    <footer>
+    <footer id="footer">
       <div className="footer-container container d-flex flex-column ">
         <div className="footer-top d-flex">
           <div>
