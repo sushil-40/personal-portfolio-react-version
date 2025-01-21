@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
-import flickstoreImage from "../assets/flickstore.png";
-import prankcalculatorImage from "../assets/prankcalculator.png";
-import timewiseImage from "../assets/timewise.png";
-import contactlistImage from "../assets/contactlist.png";
-import projectParallaxImage from "../assets/projects-section.png";
+import flickstoreImage from "../assets/completed-projects/flickstore.png";
+import prankcalculatorImage from "../assets/completed-projects/prankcalculator.png";
+import timewiseImage from "../assets/completed-projects/timewise.png";
+import contactlistImage from "../assets/layout-background/contactlist.png";
+import projectParallaxImage from "../assets/layout-background/projects-section.webp";
 import { Parallax } from "./Parallax";
 
 import contactListDemo from "../assets/video-demo/contact-list-demo.mp4";
 import flickStoreDemo from "../assets/video-demo/flick-store-demo.mp4";
+import timewiseDemo from "../assets/video-demo/time-wise-demo.mp4";
+import prankCalculatorDemo from "../assets/video-demo/prank-calculator-demo.mp4";
+import { RunningProject } from "./RunningProject";
+
 export const Projects = () => {
   const projectList = [
     {
@@ -26,7 +30,7 @@ export const Projects = () => {
       description:
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
       img: { path: prankcalculatorImage, alt: "project_2" },
-      projectDemo: { video: contactListDemo },
+      projectDemo: { video: prankCalculatorDemo },
     },
     {
       id: 3,
@@ -34,7 +38,7 @@ export const Projects = () => {
       description:
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
       img: { path: timewiseImage, alt: "project_3" },
-      projectDemo: { video: contactListDemo },
+      projectDemo: { video: timewiseDemo },
     },
     {
       id: 4,
@@ -243,14 +247,7 @@ export const Projects = () => {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              <RunningProject />
             </div>
           </div>
         </div>

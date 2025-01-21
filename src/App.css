@@ -79,7 +79,7 @@ a {
 /* =================Parallax Section Effect ====================*/
 .parallax {
   height: 300px; /* Adjust the height as needed */
-  background-image: url("./assets/bg-2.webp"); /* Replace with your image */
+  background-image: url("./assets/layout-background/bg-2.webp"); /* Replace with your image */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -124,7 +124,7 @@ header {
   flex-direction: column;
   text-align: center;
 
-  background: url("./assets/hbg-1.png") no-repeat center;
+  background: url("./assets/layout-background/hbg-1.webp") no-repeat center;
 
   background-size: cover;
 
@@ -236,17 +236,17 @@ header {
 }
 
 .front {
-  background: url("./assets/sus-bg.png") no-repeat;
+  background: url("./assets/layout-background/sus-bg.webp") no-repeat;
   background-size: cover;
   transform: translateZ(100px);
 }
 .back {
-  background: url("./assets/bg-2.webp") no-repeat;
+  background: url("./assets/layout-background/bg-2.webp") no-repeat;
   background-size: cover;
   transform: rotateY(180deg) translateZ(100px);
 }
 .left {
-  background: url("./assets/abt-para-1.png");
+  background: url("./assets/layout-background/abt-para-1.webp");
   /* background: url("./assets/dice-face/face-i.png") no-repeat; */
   background-size: cover;
   transform: rotateY(-90deg) translateZ(100px);
@@ -257,13 +257,13 @@ header {
   transform: rotateY(90deg) translateZ(100px);
 }
 .top {
-  background: url("./assets/projects-section.png") no-repeat;
+  background: url("./assets/layout-background/projects-section.webp") no-repeat;
   /* background: url("./assets/dice-face/face-v.png") no-repeat; */
   background-size: cover;
   transform: rotateX(90deg) translateZ(100px);
 }
 .bottom {
-  background: url("./assets/fbg-4.png") no-repeat;
+  background: url("./assets/layout-background/fbg-4.webp") no-repeat;
   background-size: cover;
   transform: rotateX(-90deg) translateZ(100px);
 }
@@ -320,7 +320,8 @@ header {
   right: 0;
   bottom: 20px;
 
-  background: url("./assets/about-bg-4.png") no-repeat center center/cover;
+  background: url("./assets/layout-background/about-bg-4.png") no-repeat center
+    center/cover;
 
   opacity: 0.9; /* Adjust the opacity here */
   background-position: top;
@@ -461,7 +462,7 @@ header {
   padding: 0px 0;
   border: 2px solid black;
   text-align: center;
-  background: url("./assets/prj-2.png") no-repeat;
+  background: url("./assets/completed-projects/prj-2.png") no-repeat;
   background-size: cover;
 }
 video {
@@ -550,7 +551,7 @@ video {
       rgba(112, 110, 110, 0.185),
       rgba(235, 223, 223, 0.5)
     ),
-    url("./assets/contact-1.png");
+    url("./assets/layout-background/contact-1.png");
   background-size: cover;
   border: 2px solid black;
 }

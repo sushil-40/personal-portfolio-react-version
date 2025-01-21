@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Parallax } from "./Parallax";
 
-import skillsParallaxImg1 from "../assets/abt-para-1.png";
+import skillsParallaxImg1 from "../assets/layout-background/abt-para-1.webp";
 
 export const Skills = () => {
   const [HoveredIndex, setHoveredIndex] = useState(null);

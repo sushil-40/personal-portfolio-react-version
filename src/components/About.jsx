@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Parallax } from "./Parallax";
-import parallaxAboutImg from "../assets/bg-2.webp";
+import parallaxAboutImg from "../assets/layout-background/bg-2.webp";
 
 export const About = () => {
   return (
