@@ -19,8 +19,7 @@ export const Projects = () => {
       title: "Flick Store",
       description:
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
-      img: { path: flickstoreImage, alt: "project_2" },
-      alt: "project_1",
+      img: { path: flickstoreImage, alt: "flick-store" },
       backgroundColor: "red",
       projectDemo: { video: flickStoreDemo },
     },
@@ -29,7 +28,7 @@ export const Projects = () => {
       title: "Prank Calculator",
       description:
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
-      img: { path: prankcalculatorImage, alt: "project_2" },
+      img: { path: prankcalculatorImage, alt: "prank-calc" },
       projectDemo: { video: prankCalculatorDemo },
     },
     {
@@ -37,14 +36,14 @@ export const Projects = () => {
       title: "TimeWise",
       description:
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
-      img: { path: timewiseImage, alt: "project_3" },
+      img: { path: timewiseImage, alt: "timewise" },
       projectDemo: { video: timewiseDemo },
     },
     {
       id: 4,
       title: "Contact List",
       description: "lorem ipsum dolor sit amet, consectetur adip",
-      img: { path: contactlistImage, alt: "project_4" },
+      img: { path: contactlistImage, alt: "contact-list" },
       projectDemo: { video: contactListDemo },
     },
   ];
@@ -112,7 +111,7 @@ export const Projects = () => {
                     <div key={i} className="project">
                       <img
                         src={project.img.path}
-                        alt={project.alt}
+                        alt={project.img.alt}
                         // height={50}
                         // width={50}
                       />

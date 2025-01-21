@@ -10,7 +10,7 @@ export const RunningProject = () => {
       title: "Balancing Beads",
       description:
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
-      img: { path: balancingBeadsImage, alt: "project_2" },
+      img: { path: balancingBeadsImage, alt: "balancing-beads" },
       alt: "project_1",
       backgroundColor: "red",
       projectDemo: { video: "" },
@@ -20,7 +20,7 @@ export const RunningProject = () => {
       title: "Tyreshop Management",
       description:
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
-      img: { path: tyreshopManagementImage, alt: "project_2" },
+      img: { path: tyreshopManagementImage, alt: "tyreshop-management" },
       projectDemo: { video: "" },
     },
   ];
@@ -40,13 +40,6 @@ export const RunningProject = () => {
                 width: "100%", // Adjust width as needed
               }}
             ></div>
-            {/* <img
-              src={project.img.path}
-              alt={project.alt}
-
-              // height={50}
-              // width={50}
-            /> */}
 
             <div className="project-content">
               <div className="links">
