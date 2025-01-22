@@ -3,7 +3,7 @@ import flickstoreImage from "../assets/completed-projects/flickstore.png";
 import prankcalculatorImage from "../assets/completed-projects/prankcalculator.png";
 import timewiseImage from "../assets/completed-projects/timewise.png";
 import contactlistImage from "../assets/layout-background/contactlist.png";
-import projectParallaxImage from "../assets/layout-background/projects-section.webp";
+import projectParallaxImage from "../assets/layout-background/projects-section.png";
 import { Parallax } from "./Parallax";
 
 import contactListDemo from "../assets/video-demo/contact-list-demo.mp4";
