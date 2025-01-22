@@ -1,6 +1,6 @@
 import React from "react";
 
-import contactParallaxImage2 from "../assets/layout-background/contact-3.png";
+import contactParallaxImage2 from "../assets/layout-background/contact-3.webp";
 
 import { Parallax } from "./Parallax";
 export const Contact = () => {
