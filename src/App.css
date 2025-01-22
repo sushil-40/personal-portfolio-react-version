@@ -806,7 +806,7 @@ footer .bottom {
   .hero-container {
     flex-direction: column;
   }
-  /* .parallax {
+  .parallax {
     background-attachment: scroll;
-  } */
+  }
 }
