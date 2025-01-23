@@ -807,7 +807,6 @@ footer .bottom {
     flex-direction: column;
   }
   .parallax {
-    height: 400px;
-    /* background-attachment: scroll; */
+    background-attachment: scroll;
   }
 }

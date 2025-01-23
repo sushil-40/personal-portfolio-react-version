@@ -1,27 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 
 export const Parallax = ({ backgroundImage, title }) => {
-  const parallaxRef = useRef(null);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        const offset = entry.boundingClientRect.top;
-        parallaxRef.current.style.setProperty(
-          "-parallax-offset",
-          `${offset * 0.5}px`
-        );
-      },
-      { root: null, rootMargin: "0px", threshold: 0 }
-    );
-    if (parallaxRef.current) {
-      observer.observe(parallaxRef.current);
-    }
-    return () => {
-      if (parallaxRef.current) {
-        observer.unobserve(parallaxRef.current);
-      }
-    };
-  }, []);
   const style = {
     backgroundImage: `url(${backgroundImage})`,
   };
@@ -40,10 +19,8 @@ export const Parallax = ({ backgroundImage, title }) => {
 
     backdropfilter: "10px",
   };
-
   return (
     <div
-      ref={parallaxRef}
       className="parallax d-flex justify-content-center align-items-center "
       style={style}
     >
