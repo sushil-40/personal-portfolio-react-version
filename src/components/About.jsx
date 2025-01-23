@@ -9,7 +9,7 @@ export const About = () => {
       <Parallax backgroundImage={parallaxAboutImg} title={"About Me"} />
 
       <div className="container">
-        <div className="test mt-5">
+        <div className="mt-5">
           <div className="container flex about-content">
             <div className="my-bio reveal ">
               <p>

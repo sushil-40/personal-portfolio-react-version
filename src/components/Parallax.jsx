@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export const Parallax = ({ backgroundImage, title }) => {
   const style = {
@@ -19,6 +19,21 @@ export const Parallax = ({ backgroundImage, title }) => {
 
     backdropfilter: "10px",
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      const parallaxEffect = document.querySelector(".parallax");
+      if (parallaxEffect) {
+        const scrollPostion = window.scrollY;
+        parallaxEffect.style.backgroundPositionY = `${scrollPostion * 0.2}px`;
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    //Cleanup listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div
       className="parallax d-flex justify-content-center align-items-center "
