@@ -1,6 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 export const Parallax = ({ backgroundImage, title }) => {
+  const parallaxRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const offset = entry.boundingClientRect.top;
+        parallaxRef.current.style.setProperty(
+          "-parallax-offset",
+          `${offset * 0.5}px`
+        );
+      },
+      { root: null, rootMargin: "0px", threshold: 0 }
+    );
+    if (parallaxRef.current) {
+      observer.observe(parallaxRef.current);
+    }
+    return () => {
+      if (parallaxRef.current) {
+        observer.unobserve(parallaxRef.current);
+      }
+    };
+  }, []);
   const style = {
     backgroundImage: `url(${backgroundImage})`,
   };
@@ -19,23 +40,10 @@ export const Parallax = ({ backgroundImage, title }) => {
 
     backdropfilter: "10px",
   };
-  useEffect(() => {
-    const handleScroll = () => {
-      const parallaxEffect = document.querySelector(".parallax");
-      if (parallaxEffect) {
-        const scrollPostion = window.scrollY;
-        parallaxEffect.style.backgroundPositionY = `${scrollPostion * 0.2}px`;
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
 
-    //Cleanup listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
     <div
+      ref={parallaxRef}
       className="parallax d-flex justify-content-center align-items-center "
       style={style}
     >
