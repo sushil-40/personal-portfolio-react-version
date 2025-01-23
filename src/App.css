@@ -115,6 +115,13 @@ header {
   color: #e8491d;
 }
 
+.navbar-toggler {
+  margin-left: auto;
+}
+.navbar-nav .nav-item {
+  text-align: center; /* Center-align nav items */
+  margin: 5px 0; /* Add spacing between items */
+}
 /* ========================================== Hero Section ================================ */
 
 #hero {
@@ -860,5 +867,27 @@ footer .bottom {
   }
   .left-content {
     width: 90%;
+  }
+}
+/* Media query for devices below 458px */
+@media (max-width: 458px) {
+  .navbar-toggler {
+    position: fixed; /* Fix the hamburger menu on the right */
+    top: 10px; /* Adjust the vertical position */
+    right: 10px; /* Align to the right edge */
+    z-index: 999; /* Ensure it stays on top */
+  }
+
+  .navbar-collapse {
+    top: 50px; /* Adjust below the hamburger icon */
+    right: 0; /* Align the menu to the right */
+  }
+
+  .navbar-nav {
+    padding: 10px; /* Add some padding for better spacing */
+  }
+
+  .navbar-nav .nav-link {
+    color: white; /* Ensure text remains visible */
   }
 }
