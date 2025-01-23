@@ -808,5 +808,6 @@ footer .bottom {
   }
   .parallax {
     height: 400px;
+    background-attachment: scroll;
   }
 }
