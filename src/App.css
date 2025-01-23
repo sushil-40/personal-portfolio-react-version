@@ -853,3 +853,12 @@ footer .bottom {
     background-attachment: scroll;
   }
 }
+
+@media (max-width: 700px) {
+  .hero-container {
+    flex-direction: column;
+  }
+  .left-content {
+    width: 90%;
+  }
+}
