@@ -84,11 +84,11 @@ export const Hero = () => {
     <section id="hero" className="d-flex">
       <div className="container hero-container d-flex">
         <div className="left-content col-md-6 ">
-          <h1 className="lead  animated fadeInRight font-effect-shadow-multiple">
+          <h1 className="animated fadeInRight font-effect-shadow-multiple">
             Sushil Dangoriya
           </h1>
           <hr className="m-1 hr-line" />
-          <h2 className=" animated fadeInLeft font-effect-shadow-multiple">
+          <h2 className="  fadeInLeft font-effect-shadow-multiple">
             Web Developer & Designer
           </h2>
           <p className="lead animated fadeInRight">
