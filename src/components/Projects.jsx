@@ -21,29 +21,39 @@ export const Projects = () => {
         "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
       img: { path: flickstoreImage, alt: "flick-store" },
       backgroundColor: "red",
+      gitHubLink: "https://github.com/sushil-40/FlickStore",
+      siteLink: "https://flick-store.vercel.app/",
       projectDemo: { video: flickStoreDemo },
     },
     {
       id: 2,
       title: "Prank Calculator",
       description:
-        "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
+        "Prank Calculator is a fun web application that performs arithmetic calculations but occasionally surprises users with false results, flashing a red display and playing a sound for a humorous twist.",
       img: { path: prankcalculatorImage, alt: "prank-calc" },
+      gitHubLink: "https://github.com/sushil-40/prank-calculator-using-react",
+      siteLink: "https://prank-calculator-using-react.vercel.app/",
       projectDemo: { video: prankCalculatorDemo },
     },
     {
       id: 3,
       title: "TimeWise",
       description:
-        "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
+        "TimeWise is a task management web application that helps users allocate hours to tasks, identify unnecessary tasks by moving them to a 'bad list,' and track both total hours allocated and potential time savings.",
       img: { path: timewiseImage, alt: "timewise" },
+      gitHubLink: "https://github.com/sushil-40/time-wise-app-using-react",
+      siteLink: "https://time-wise-app-using-react.vercel.app/",
       projectDemo: { video: timewiseDemo },
     },
     {
       id: 4,
       title: "Contact List",
-      description: "lorem ipsum dolor sit amet, consectetur adip",
+      description:
+        "Contact List is a web application designed with a mobile screen interface. Users unlock the screen to access a contact icon, displaying a list of contacts loaded from an API. Features include total contact count, sorting by gender, and search functionality.",
+
       img: { path: contactlistImage, alt: "contact-list" },
+      gitHubLink: "https://github.com/sushil-40/Contact-List",
+      siteLink: "https://sushil-40.github.io/Contact-List/",
       projectDemo: { video: contactListDemo },
     },
   ];
@@ -118,10 +128,10 @@ export const Projects = () => {
 
                       <div className="project-content">
                         <div className="links">
-                          <a href="">
+                          <a href={project.gitHubLink}>
                             <i className="fa-brands fa-github"></i>
                           </a>
-                          <a href="">
+                          <a href={project.siteLink}>
                             <i className="fa-brands fa-chrome"></i>
                           </a>
                         </div>

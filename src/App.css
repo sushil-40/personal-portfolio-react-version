@@ -830,8 +830,20 @@ footer .bottom {
   .left-content {
     width: 80%;
   }
+  .left-content h1 {
+    font-size: 2rem; /* Adjust for mobile screens */
+  }
+
+  .left-content h2 {
+    font-size: 1.4rem; /* Adjust for mobile screens */
+  }
   .hero-container {
     flex-direction: column;
+  }
+  .left-content {
+    transform: scale(
+      0.9
+    ); /* Scales the container to 90% of its original size */
   }
   .right-content {
     margin-top: 40px;
@@ -889,5 +901,12 @@ footer .bottom {
 
   .navbar-nav .nav-link {
     color: white; /* Ensure text remains visible */
+  }
+  .left-content .name {
+    font-size: 1 rem; /* Adjust for mobile screens */
+  }
+
+  .left-content .job-title {
+    font-size: 10px; /* Adjust for mobile screens */
   }
 }

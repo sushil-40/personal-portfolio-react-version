@@ -9,7 +9,7 @@ export const RunningProject = () => {
       id: 1,
       title: "Balancing Beads",
       description:
-        "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
+        "Balancing Beads is a web application that helps users calculate the required quantity of beads needed to balance tires based on tire size and vehicle specifications.",
       img: { path: balancingBeadsImage, alt: "balancing-beads" },
       alt: "project_1",
       backgroundColor: "red",
@@ -19,7 +19,7 @@ export const RunningProject = () => {
       id: 2,
       title: "Tyreshop Management",
       description:
-        "FlickStore is a React-based web app for exploring and saving movies. Users can search, view trending titles, watch trailers, and organize favorites into categories.",
+        "TyreShop Management is a comprehensive application designed to streamline operations, featuring stock management, a billing system, and advanced tools for efficient shop management and seamless user interaction.",
       img: { path: tyreshopManagementImage, alt: "tyreshop-management" },
       projectDemo: { video: "" },
     },
@@ -43,16 +43,16 @@ export const RunningProject = () => {
 
             <div className="project-content">
               <div className="links">
-                <a href="">
+                <a href="#">
                   <i className="fa-brands fa-github"></i>
                 </a>
-                <a href="">
+                <a href="#">
                   <i className="fa-brands fa-chrome"></i>
                 </a>
               </div>
 
               <h3>{project.title}</h3>
-              <p>{project.description.slice(0, 100) + " ...."}</p>
+              <p>{project.description}</p>
             </div>
           </div>
         );

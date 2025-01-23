@@ -29,14 +29,18 @@ export const Hero = () => {
   };
 
   const handleOnRollDiceClicked = () => {
-    setTimeout(() => {
-      setResultFace(Math.floor(Math.random() * 6) + 1);
-    }, 1000);
-
-    setAnimationClass("");
+    // setAnimationClass("spin-animation");
     setTimeout(() => {
       setAnimationClass("spin-animation");
     }, 50);
+    setTimeout(() => {
+      setResultFace(Math.floor(Math.random() * 6) + 1);
+      setAnimationClass("");
+    }, 1000);
+
+    // setTimeout(() => {
+    //   setAnimationClass("spin-animation");
+    // }, 50);
 
     setIsBlurred(true);
   };
@@ -84,11 +88,11 @@ export const Hero = () => {
     <section id="hero" className="d-flex">
       <div className="container hero-container d-flex">
         <div className="left-content col-md-6 ">
-          <h1 className="animated fadeInRight font-effect-shadow-multiple">
+          <h1 className=" name fadeInRight font-effect-shadow-multiple">
             Sushil Dangoriya
           </h1>
           <hr className="m-1 hr-line" />
-          <h2 className="  fadeInLeft font-effect-shadow-multiple">
+          <h2 className=" job-title fadeInLeft font-effect-shadow-multiple">
             Web Developer & Designer
           </h2>
           <p className="lead animated fadeInRight">
@@ -101,7 +105,8 @@ export const Hero = () => {
             Explore My Work
           </a>
           <a
-            href="#projects"
+            href="./assets/sushil-resume.pdf"
+            download={`sushil - resume.pdf`}
             className="btn btn-primary btn-lg animated fadeInUp"
           >
             Download Resume
