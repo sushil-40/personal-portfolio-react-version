@@ -862,8 +862,18 @@ footer .bottom {
     flex-direction: column;
   }
   .left-content {
+    padding: 15px;
+    border-radius: 10px;
+    margin: 5px 5px;
     width: 80%;
   }
+  #hero h1 {
+    font-size: 2em;
+  }
+  #hero h2 {
+    font-size: 1.5em;
+  }
+
   .cube {
     height: 150px;
     width: 150px;
@@ -894,7 +904,13 @@ footer .bottom {
     top: 50px; /* Adjust below the hamburger icon */
     right: 0; /* Align the menu to the right */
   }
+  #hero h1 {
+    font-size: 1.8em; /* Further reduce for very small screens */
+  }
 
+  #hero h2 {
+    font-size: 1.3em; /* Further reduce for very small screens */
+  }
   .navbar-nav {
     padding: 10px; /* Add some padding for better spacing */
   }
@@ -903,7 +919,9 @@ footer .bottom {
     color: white; /* Ensure text remains visible */
   }
   .left-content .name {
-    font-size: 1 rem; /* Adjust for mobile screens */
+    /* font-size: 1 rem; Adjust for mobile screens */
+    padding: 10px; /* Adjust for smaller devices */
+    margin: 3px 3px;
   }
 
   .left-content .job-title {
