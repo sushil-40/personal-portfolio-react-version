@@ -307,7 +307,7 @@ header {
 }
 /* About Section */
 #about {
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
   background-color: #fff;
 
   position: relative;
@@ -386,6 +386,7 @@ header {
   overflow: hidden;
   position: relative;
   border: 2px solid black;
+  z-index: 4;
 }
 
 #skills h2 {
