@@ -14,6 +14,7 @@ html {
 
 /* General Styles */
 body {
+  max-width: 1450px;
   font-family: "Open Sans", sans-serif;
   color: #333;
   background-color: #f4f4f4;
