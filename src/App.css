@@ -918,7 +918,11 @@ footer .bottom {
   .navbar-nav .nav-link {
     color: white; /* Ensure text remains visible */
   }
+  .hero-container {
+    width: 100%;
+  }
   .left-content .name {
+    /* width: 100%; */
     /* font-size: 1 rem; Adjust for mobile screens */
     padding: 10px; /* Adjust for smaller devices */
     margin: 3px 3px;
