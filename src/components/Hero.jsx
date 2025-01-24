@@ -105,8 +105,8 @@ export const Hero = () => {
             Explore My Work
           </a>
           <a
-            href="./assets/sushil-resume.pdf"
-            download={`sushil - resume.pdf`}
+            href="/file-assets/sushil-resume.pdf"
+            download="sushil-resume.pdf"
             className="btn btn-primary btn-lg animated fadeInUp"
           >
             Download Resume
