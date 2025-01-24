@@ -818,10 +818,18 @@ footer .bottom {
     height: 150px;
   }
 }
-@media (max-width: 1040px) {
+@media (max-width: 1040px) and (min-width: 1000px) {
+  .hero-container {
+    height: 800px;
+  }
   .cube {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+  }
+  .btn-magic {
+    margin-top: 90px;
+    height: 20px;
+    width: 20px;
   }
 }
 
