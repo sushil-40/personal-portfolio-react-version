@@ -1010,9 +1010,9 @@ footer .bottom {
 
 /* Desktops and Larger Screens (Extra Large Devices - 1200px and up) */
 @media (min-width: 1200px) {
-  body {
-    font-size: 20px;
-  }
+  /* body {
+    /* font-size: 20px; */
+
   #hero {
     min-height: 90vh;
   }
