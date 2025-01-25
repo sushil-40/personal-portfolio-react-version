@@ -684,7 +684,7 @@ button[type="submit"]:hover {
 
 /* =================================== Footer Section ============================================ */
 footer {
-  min-height: 20vh;
+  min-height: 30vh;
   background: linear-gradient(
     135deg,
     rgba(4, 4, 65, 0.849),
