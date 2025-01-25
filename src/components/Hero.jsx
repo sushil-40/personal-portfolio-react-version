@@ -52,6 +52,7 @@ export const Hero = () => {
 
   // Scroll to the appropriate section based on the dice roll
   setTimeout(() => {
+    if (!resultFace) return;
     switch (resultFace) {
       case 1:
         document.getElementById("hero").scrollIntoView({ behavior: "smooth" });
@@ -82,6 +83,7 @@ export const Hero = () => {
       default:
         break;
     }
+    setResultFace(null);
   }, 3000);
 
   return (
