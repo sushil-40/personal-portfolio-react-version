@@ -21,6 +21,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 .blur {
   /* background: url("./assets/b.jpg"); */
@@ -125,7 +126,63 @@ header {
 }
 /* ========================================== Hero Section ================================ */
 
+/* start test * /
+/* Hero Section */
 #hero {
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  background: url("./assets/layout-background/hbg-1.webp") no-repeat center;
+
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(63, 60, 60, 0.329);
+  z-index: 1;
+}
+#hero .hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  z-index: 2;
+}
+
+.left-content {
+  width: 500px;
+  height: auto;
+  z-index: 2;
+  backdrop-filter: blur(10px);
+  box-shadow: 6px 6px 15px rgba(32, 31, 31, 0.938),
+    -6px -4px 15px rgba(239, 239, 245, 0.932);
+  border-radius: 20px;
+  margin: 10px 10px;
+  padding: 30px;
+}
+
+.right-content {
+  width: 400px;
+  margin: 10px 10px;
+  height: auto;
+}
+/* end test */
+/* #hero {
   min-height: 100vh;
   justify-content: center;
   align-items: center;
@@ -143,23 +200,17 @@ header {
   overflow: hidden;
   border-right: 2px solid black;
   border-left: 2px solid black;
-}
-#hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(63, 60, 60, 0.329); /* Black overlay with 50% opacity */
-  z-index: 1;
-}
-.hero-container {
+} */
+
+/* .hero-container {
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
   z-index: 2;
-}
-.left-content {
+} */
+/* .left-content {
+  width: 500px;
+  height: 300px;
   z-index: 2;
 
   backdrop-filter: blur(10px);
@@ -169,26 +220,30 @@ header {
 
   border-radius: 20px;
   margin: 10px 10px;
-}
-#hero .container {
+  flex-wrap: wrap;
+} */
+/* #hero .container {
   position: relative;
+} */
+.btn-magic {
+  margin-top: 80px;
+  margin-left: -40px;
 }
-
 #hero h2 {
-  font-size: 3em;
+  font-size: 1.5em;
   margin-bottom: 10px;
   animation: slideInLeft 1s ease-in-out forwards;
   color: blue;
 }
 #hero h1 {
-  font-size: 3em;
+  font-size: 2em;
   margin-bottom: 10px;
   animation: fadeInBottom 1.5s ease-in-out forwards;
   color: rgb(10, 2, 32);
 }
 
 #hero p {
-  font-size: 1.3em;
+  font-size: 1em;
   color: white;
   margin-bottom: 20px;
   animation: slideInRight 1.2s ease-in-out forwards;
@@ -199,6 +254,7 @@ header {
   color: #e8491d;
   margin-right: 10px;
   margin-bottom: 10px;
+  margin-top: 20px;
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -221,9 +277,11 @@ header {
   opacity: 1;
   z-index: 4;
 }
-.right-content {
-  position: relative;
-}
+/* .right-content { */
+/* position: relative; */
+/* width: 400px;
+  height: 300px;
+} */
 
 /* ==================== 3D dice implementation ======================   */
 .cube {
@@ -810,72 +868,81 @@ footer .bottom {
     transform: translateY(0);
   }
 }
-/* =========================== Media Queries =========================== */
 
-@media (max-width: 1080px) {
-  .cube {
-    width: 150px;
-    height: 150px;
-  }
-}
-@media (max-width: 1040px) and (min-width: 1000px) {
-  .hero-container {
-    height: 800px;
-  }
-  .cube {
-    width: 150px;
-    height: 150px;
-  }
-  .btn-magic {
-    margin-top: 90px;
-    height: 20px;
-    width: 20px;
-  }
-}
+/* ............................ Media Queries For All Resolutions ....................*/
 
-@media (max-width: 970px) {
-  .hero {
-    min-height: 120vh;
-  }
-  .left-content {
-    width: 80%;
-  }
-  .left-content h1 {
-    font-size: 2rem; /* Adjust for mobile screens */
+/* iPhone (Small Devices - 375px to 575px) */
+@media (max-width: 575px) {
+  body {
+    font-size: 14px;
   }
 
-  .left-content h2 {
-    font-size: 1.4rem; /* Adjust for mobile screens */
+  .container {
+    padding: 10px;
+  }
+  .navbar-toggler {
+    position: fixed; /* Fix the hamburger menu on the right */
+    top: 10px; /* Adjust the vertical position */
+    right: 10px; /* Align to the right edge */
+    z-index: 999; /* Ensure it stays on top */
+  }
+
+  .navbar-collapse {
+    top: 50px; /* Adjust below the hamburger icon */
+    right: 0; /* Align the menu to the right */
+  }
+
+  .navbar-nav {
+    padding: 10px; /* Add some padding for better spacing */
+  }
+
+  .navbar-nav .nav-link {
+    color: white; /* Ensure text remains visible */
   }
   .hero-container {
     flex-direction: column;
+    width: 100%;
+  }
+  #hero h1 {
+    font-size: 1.8em; /* Further reduce for very small screens */
+  }
+
+  #hero h2 {
+    font-size: 1.3em; /* Further reduce for very small screens */
+  }
+  .left-container {
+    padding: 20px;
   }
   .left-content {
-    transform: scale(
-      0.9
-    ); /* Scales the container to 90% of its original size */
-  }
-  .right-content {
-    margin-top: 40px;
-  }
-  .cube {
-    height: 100px;
-    width: 100px;
+    width: 380px;
   }
   .btn-magic {
-    margin-top: 120px;
+    margin-left: -34px;
   }
 }
 
-@media (max-width: 768px) {
-  .hero-container {
-    flex-direction: column;
+/* iPads and Tablets (Medium Devices - 576px to 991px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  body {
+    font-size: 14px;
   }
-  .left-content {
+
+  .container {
     padding: 15px;
+  }
+  .hero-container {
+    flex-direction: column;
+  }
+  .left-container {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .left-content {
+    padding: 35px;
     border-radius: 10px;
     margin: 5px 5px;
-    width: 80%;
+    width: 90%;
   }
   #hero h1 {
     font-size: 2em;
@@ -888,57 +955,68 @@ footer .bottom {
     height: 150px;
     width: 150px;
   }
+  .btn-magic {
+    margin-left: -40px;
+  }
   .parallax {
     background-attachment: scroll;
   }
 }
 
-@media (max-width: 700px) {
-  .hero-container {
-    flex-direction: column;
+/* iPad Pro and Small Laptops (Large Devices - 992px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  body {
+    font-size: 28px;
+  }
+
+  /* .container {
+    padding: 20px;
+  } */
+  .left-container {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    width: 100%;
   }
   .left-content {
     width: 90%;
+    padding: 70px;
+    /* transform: scale(
+      0.9
+    ); Scales the container to 90% of its original size */
   }
-}
-/* Media query for devices below 458px */
-@media (max-width: 458px) {
-  .navbar-toggler {
-    position: fixed; /* Fix the hamburger menu on the right */
-    top: 10px; /* Adjust the vertical position */
-    right: 10px; /* Align to the right edge */
-    z-index: 999; /* Ensure it stays on top */
+  .left-content h1 {
+    font-size: 3rem; /* Adjust for mobile screens */
   }
 
-  .navbar-collapse {
-    top: 50px; /* Adjust below the hamburger icon */
-    right: 0; /* Align the menu to the right */
-  }
-  #hero h1 {
-    font-size: 1.8em; /* Further reduce for very small screens */
-  }
-
-  #hero h2 {
-    font-size: 1.3em; /* Further reduce for very small screens */
-  }
-  .navbar-nav {
-    padding: 10px; /* Add some padding for better spacing */
-  }
-
-  .navbar-nav .nav-link {
-    color: white; /* Ensure text remains visible */
+  .left-content h2 {
+    font-size: 2.4rem; /* Adjust for mobile screens */
   }
   .hero-container {
-    width: 100%;
-  }
-  .left-content .name {
-    /* width: 100%; */
-    /* font-size: 1 rem; Adjust for mobile screens */
-    padding: 10px; /* Adjust for smaller devices */
-    margin: 3px 3px;
+    flex-direction: column;
   }
 
-  .left-content .job-title {
-    font-size: 10px; /* Adjust for mobile screens */
+  .right-content {
+    margin-top: 20px;
+  }
+  .cube {
+    height: 100px;
+    width: 100px;
+  }
+  .btn-magic {
+    margin-left: -100px;
+    margin-top: 120px;
   }
 }
+
+/* Desktops and Larger Screens (Extra Large Devices - 1200px and up) */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+
+  .container {
+    padding: 30px;
+  }
+}
+
+/* ========================= End Media Queries =========================================== */
