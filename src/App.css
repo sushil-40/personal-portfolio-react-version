@@ -1013,9 +1013,15 @@ footer .bottom {
   body {
     font-size: 20px;
   }
+  #hero {
+    min-height: 90vh;
+  }
 
   .container {
     padding: 30px;
+  }
+  .left-container {
+    margin-top: -100px;
   }
 }
 
