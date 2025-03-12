@@ -208,10 +208,12 @@ export const Projects = () => {
                           className="link d-flex flex-wrap gap-5 justify-content-center align-items-center"
                           style={{ color: "Violet", fontSize: "35px" }}
                         >
-                          <a href="">
+                          {/* <a href=""> */}
+                          <a href={toggledProject.gitHubLink}>
                             <i className="fa-brands fa-github"></i>
                           </a>
-                          <a href="">
+                          {/* <a href=""> */}
+                          <a href={toggledProject.siteLink}>
                             <i className="fa-brands fa-chrome"></i>
                           </a>
                         </div>
