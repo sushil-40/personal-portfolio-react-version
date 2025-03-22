@@ -86,7 +86,6 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  will-change: transform;
 }
 /* ================================Header Section ================================ */
 header {
@@ -959,10 +958,9 @@ footer .bottom {
   .btn-magic {
     margin-left: -40px;
   }
-  /* .parallax {
+  .parallax {
     background-attachment: scroll;
-    transform: none;
-  } */
+  }
 }
 
 /* iPad Pro and Small Laptops (Large Devices - 992px to 1199px) */
