@@ -960,8 +960,7 @@ footer .bottom {
   }
   .parallax {
     background-attachment: scroll;
-
-    will-change: transform;
+    transform: none;
   }
 }
 
