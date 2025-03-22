@@ -33,7 +33,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
-export const Parallax = ({ backgroundImage, title }) => {
+const Parallax = ({ backgroundImage, title }) => {
   const parallaxRef = useRef(null);
   const [scrollEffect, setScrollEffect] = useState(0);
 
@@ -102,3 +102,5 @@ export const Parallax = ({ backgroundImage, title }) => {
     </div>
   );
 };
+
+export default Parallax;
