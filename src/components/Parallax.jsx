@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Parallax = ({ backgroundImage, title }) => {
+const Parallax = ({ backgroundImage, title }) => {
   const style = {
     backgroundImage: `url(${backgroundImage})`,
   };
@@ -31,6 +31,7 @@ export const Parallax = ({ backgroundImage, title }) => {
   );
 };
 
+export default Parallax;
 // import React, { useEffect, useRef, useState } from "react";
 
 // const Parallax = ({ backgroundImage, title }) => {
