@@ -4,7 +4,7 @@ import prankcalculatorImage from "../assets/completed-projects/prankcalculator.p
 import timewiseImage from "../assets/completed-projects/timewise.png";
 import contactlistImage from "../assets/layout-background/contactlist.png";
 import projectParallaxImage from "../assets/layout-background/projects-section.webp";
-import { Parallax } from "./Parallax";
+import Parallax from "./Parallax";
 
 import contactListDemo from "../assets/video-demo/contact-list-demo.mp4";
 import flickStoreDemo from "../assets/video-demo/flick-store-demo.mp4";

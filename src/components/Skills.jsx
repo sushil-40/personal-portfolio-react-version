@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Parallax } from "./Parallax";
-
+import Parallax from "./Parallax";
 import skillsParallaxImg1 from "../assets/layout-background/abt-para-1.webp";
 
 export const Skills = () => {

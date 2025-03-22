@@ -2,7 +2,7 @@ import React from "react";
 
 import contactParallaxImage2 from "../assets/layout-background/contact-3.webp";
 
-import { Parallax } from "./Parallax";
+import Parallax from "./Parallax";
 export const Contact = () => {
   const iconStyle = {
     color: "rgba(14, 14, 109, 0.877)",
