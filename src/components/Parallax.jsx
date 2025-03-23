@@ -63,9 +63,11 @@ const Parallax = ({ backgroundImage, title }) => {
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    backgroundAttachment: "fixed",
+    // backgroundAttachment: "fixed",
+    backgroundRepeat: "no-repeat",
     height: "300px",
     width: "100%",
+    backgroundAttachment: window.innerWidth > 768 ? "fixed" : "scroll", // Disable fixed on mobile
   };
 
   const styleContent = {
