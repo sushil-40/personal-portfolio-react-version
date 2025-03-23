@@ -870,6 +870,13 @@ footer .bottom {
 }
 
 /* ............................ Media Queries For All Resolutions ....................*/
+@media (max-width: 768px) {
+  /* For mobile devices */
+  .parallax {
+    background-attachment: scroll; /* Disable fixed background for mobile */
+    background-position: center center;
+  }
+}
 
 /* iPhone (Small Devices - 375px to 575px) */
 @media (max-width: 575px) {
@@ -957,9 +964,6 @@ footer .bottom {
   }
   .btn-magic {
     margin-left: -40px;
-  }
-  .parallax {
-    background-attachment: scroll;
   }
 }
 

@@ -32,15 +32,26 @@
 // };
 
 // export default Parallax;
-
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Parallax = ({ backgroundImage, title }) => {
   const parallaxRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Check the screen size on initial load
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const applyParallax = () => {
-      if (window.innerWidth <= 768) {
+      if (!isMobile) {
         const handleScroll = () => {
           const scrollPos = window.scrollY;
           const speed = 0.5; // Adjust the speed for desired effect
@@ -57,17 +68,16 @@ const Parallax = ({ backgroundImage, title }) => {
     };
 
     applyParallax();
-  }, []);
+  }, [isMobile]);
 
   const style = {
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    // backgroundAttachment: "fixed",
-    // backgroundRepeat: "no-repeat",
-    height: "300px",
+    backgroundRepeat: "repeat",
+    height: "50vh",
     width: "100%",
-    backgroundAttachment: window.innerWidth > 768 ? "fixed" : "scroll", // Disable fixed on mobile
+    backgroundAttachment: isMobile ? "scroll" : "fixed", // Disable fixed on mobile
   };
 
   const styleContent = {
@@ -78,7 +88,7 @@ const Parallax = ({ backgroundImage, title }) => {
     borderRadius: "10px",
     textTransform: "uppercase",
     letterSpacing: "0.5rem",
-    backdropFilter: "blur(2px)",
+    backdropFilter: isMobile ? "none" : "blur(2px)", // Disable backdropFilter on mobile
     boxShadow: `6px 6px 15px rgba(35, 179, 204, 0.94),
     -6px -4px 15px rgba(45, 45, 150, 0.69)`,
   };

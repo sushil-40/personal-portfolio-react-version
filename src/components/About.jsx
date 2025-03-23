@@ -1,12 +1,17 @@
 import React from "react";
 
 import Parallax from "./Parallax";
+// import parallaxAboutImg from "../assets/layout-background/bg-2.webp";
 import parallaxAboutImg from "../assets/layout-background/bg-2.webp";
 
 export const About = () => {
   return (
     <section id="about">
-      <Parallax backgroundImage={parallaxAboutImg} title={"About Me"} />
+      <Parallax
+        backgroundImage={parallaxAboutImg}
+        title={"About Me"}
+        alt="Parallax Background"
+      />
 
       <div className="container">
         <div className="mt-5">
